@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <title>About Us - Ticketins - Travel & Tours</title>
+  <link rel="icon" href="images/LogoWhite.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="bg-light">
+  <!--Header/Navbar (Same as homepage)-->
+  <header class="bg-white shadow-lg fixed w-full z-50 py-2">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!--Logo-->
+        <div class="flex h-16 items-center">
+          <img src="images/Logo.png" alt="Logo" class="h-16 object-cover select-none" draggable="false" />
+          <div class="flex-shrink-0 flex flex-col items-center">
+            <span class="text-2xl font-bold text-dark leading-none">TICKETINS</span>
+            <span class="text-base text-dark leading-tight">Travel & Tours</span>
+            <span class="text-xs text-dark leading-tight">Enriching Memories</span>
+          </div>
+        </div>
+
+        <!--Desktop Navigation-->
+        <div class="hidden lg:block">
+          <div class="ml-10 flex items-center space-x-8 max-[1066px]:space-x-3">
+            <a href="index.html" class="text-dark font-medium hover:text-primary transition">Home</a>
+            <a href="#" class="text-primary font-medium hover:text-primary transition">About Us</a>
+            <a href="travel.html" class="text-dark font-medium hover:text-primary transition">Tour Packages</a>
+            <a href="other.html" class="text-dark font-medium hover:text-primary transition">Other Services</a>
+            <a href="contact.html" class="text-dark font-medium hover:text-primary transition">Contact Us</a>
+            <a href="gallery.html" class="text-dark font-medium hover:text-primary transition">Gallery</a>
+            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <!--Mobile menu button-->
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="lg:hidden text-dark hover:text-secondary focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path id="top-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"
+                class="transition-all duration-300 origin-center transform"></path>
+              <path id="middle-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"
+                class="transition-all duration-300 opacity-100"></path>
+              <path id="bottom-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"
+                class="transition-all duration-300 origin-center transform"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!--Mobile Navigation-->
+      <div id="mobile-menu"
+        class="lg:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 flex flex-col">
+        <div class="h-[calc(100vh-60px)] overflow-y-auto pt-4 px-4">
+          <a href="index.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Home</a>
+          <a href="#" class="block px-3 py-2 rounded-lg text-base font-medium text-primary hover:bg-gray-100">About
+            Us</a>
+          <a href="travel.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Tour Packages</a>
+          <a href="other.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Other Services</a>
+          <a href="contact.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Contact Us</a>
+          <a href="gallery.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Gallery</a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200">
+          <button class="w-full bg-primary text-white px-4 py-3 rounded-lg hover:bg-secondary transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!--About Hero Section-->
+    <section class="about-hero pt-16 pb-32 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-28 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Discover the passionate people behind Ticketins that makes your
+          travel experiences unforgettable.
+        </p>
+      </div>
+    </section>
+
+    <!--About Content Section-->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-lg grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-3xl font-bold text-dark mb-6">Who We Are</h2>
+            <p class="text-gray-600 mb-6">
+              Established on July 11, 2011, Ticketin's Ticketing first offered
+              only tickets. Soon after, the owner thought of venturing into a
+              full travel agency.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Ticketin's Ticketing aims to serve students and workers alike
+              who work hard for their dreams and loved ones, and people who
+              are going through life, who want to take a break, breathe for a
+              while, enjoy a vacation and have a much-deserved relaxation
+              escapade Ticketin's Ticketing offers choices that is affordable,
+              budget-friendly and a variety of travel options based on their
+              various requirements and budgetary allowances, but makes their
+              vacation enjoyable and most memorable, because truly, the
+              beautiful things we experience around us unlock the peace,
+              happiness and beauty within us.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Nature is one of the most healing experiences we can have. Just
+              being surrounded by nature, its sights and sounds, brings calm,
+              joy, and balance to our entire body, mind, and spirit.
+              <br />Plan your next vacation with us and explore exciting
+              tourist destinations
+            </p>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="images/temp_aboutus.jpg" alt="Our Team" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-accent to-secondary rounded-lg">
+        <div class="text-lg grid grid-cols-1 md:grid-cols-1 min-[71rem]:grid-cols-3">
+          <div class="bg-transparent border-6 border-transparent p-6 pb-16 rounded-lg">
+            <p class="text-gray-700 italic">
+              <b class="text-2xl text-light">WHY TRAVEL WITH US?</b>
+              <br><br>
+              <ul class="text-light">
+                <li>• High Quatlity Services</li>
+                <li>• Personalized Itineraries</li>
+                <li>• Hassle-Free Travel</li>
+                <li>• Affordable/Budget Friendly</li>
+              </ul>
+            </p>
+          </div>
+          <div class="bg-light border-6 border-light m-4 p-4 pb-16 rounded-lg">
+            <p class="text-primary">
+              <b class="text-2xl text-primary">WE OFFER:</b>
+              <br><br>
+              <ul class="text-primary">
+                <li>• Domestic Tickets</li>
+                <li>• International Tickets</li>
+                <li>• Tour Packages</li>
+                <li>• Accommodation Booking</li>
+                <li>• Airport Transfers</li>
+                <li>• Land & Sea Transportations</li>
+                <li>• Travel Insurance</li>
+              </ul>
+            </p>
+          </div>
+          <div class="bg-transparent border-6 border-transparent p-6 pb-16 rounded-lg">
+            <p class="text-md text-light">
+              <b class="text-2xl text-light">Our Vision:</b>
+              <br><br> To be a leading travel agency that is trusted,
+              innovative, and sustainable, designing exclusive & personalized
+              tours and packages that aim to provide high-quality & memorable
+              experiences. We are committed to contributing to the
+              conservation of the communities & destinations our tourists
+              visit, ultimately achieving the highest level of client
+              satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Our Values Section-->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-dark mb-4">Our Core Values</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            These principles guide everything we do at Ticketins
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!--Value 1-->
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-heart text-primary opacity-100 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">
+              Passion for Travel
+            </h3>
+            <p class="text-gray-600">
+              We're not just agents - we're travelers ourselves. Our
+              recommendations come from personal experiences and genuine love
+              for exploration.
+            </p>
+          </div>
+
+          <!--Value 2-->
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-hand-holding-heart text-secondary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">
+              Exceptional Service
+            </h3>
+            <p class="text-gray-600">
+              From your first inquiry to your return home, we provide
+              attentive, personalized service that exceeds expectations.
+            </p>
+          </div>
+
+          <!--Value 3-->
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="w-14 h-14 bg-yellow-500/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-shield-alt text-accent text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">
+              Integrity & Trust
+            </h3>
+            <p class="text-gray-600">
+              We build relationships on honesty and transparency. You'll
+              always know exactly what's included in your trip.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Our Team Section-->
+    <section class="py-16 bg-white mb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-dark mb-4">Meet Our Team</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            The passionate professionals who make your dream vacations
+            possible
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!--Team Member 1-->
+          <div class="team-member bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+            <div class="overflow-hidden">
+              <img src="images/profile_sharon.jpg" alt="Sharon Jagmis"
+                class="w-full h-64 object-cover transition duration-500" />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-bold text-dark mb-1">Sharon Jagmis</h3>
+              <p class="text-primary font-medium mb-4">
+                Chief Finance Officer
+              </p>
+              <!-- <p class="text-gray-600 text-sm">
+                
+              </p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              </div> -->
+            </div>
+          </div>
+
+          <!--Team Member 2-->
+          <div class="team-member bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+            <div class="overflow-hidden">
+              <img src="images/profile_mary.jpg" alt="Mary Joy"
+                class="w-full h-64 object-cover transition duration-500" />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-bold text-dark mb-1">
+                Mary Joy Hilario
+              </h3>
+              <p class="text-primary font-medium mb-4">
+                Chief Operations Officer
+              </p>
+              <!-- <p class="text-gray-600 text-sm">
+                Michael ensures every detail of your trip is perfectly
+                coordinated.
+              </p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              </div> -->
+            </div>
+          </div>
+
+          <!--Team Member 3-->
+          <div class="team-member bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+            <div class="overflow-hidden">
+              <img src="images/profile_maryjane.jpg" alt="Mary Jane Nallana"
+                class="w-full h-64 object-cover transition duration-500" />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-bold text-dark mb-1">
+                Mary Jane Nallana
+              </h3>
+              <p class="text-primary font-medium mb-4">
+                Reservations Specialist
+              </p>
+              <!-- <p class="text-gray-600 text-sm">
+                Emma and her team are available 24/7 to assist you during your
+                travels.
+              </p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              </div> -->
+            </div>
+          </div>
+
+          <!--Team Member 4-->
+          <div class="team-member bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+            <div class="overflow-hidden">
+              <img src="images/Logo.png" alt="Hannah Reynoso"
+                class="w-full h-64 object-cover transition duration-500" />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-bold text-dark mb-1">Hannah Reynoso</h3>
+              <p class="text-primary font-medium mb-4">Liaison Officer</p>
+              <!-- <p class="text-gray-600 text-sm">
+                David crafts unique itineraries based on his extensive global
+                travels.
+              </p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Stats Section-->
+    <!-- <section class="py-16 bg-primary text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="text-4xl font-bold mb-2">14+</div>
+            <div class="text-lg">Years in the Industry</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">5K+</div>
+            <div class="text-lg">Happy Travelers</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">50+</div>
+            <div class="text-lg">Destinations</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-lg">Customer Support</div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!--CTA Section-->
+    <section class="py-16 bg-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-dark mb-6">
+          Ready to Start Your Adventure?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Our travel experts are standing by to help you plan the perfect
+          getaway tailored to your interests and budget.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html">
+            <button class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">
+              Contact Our Team
+            </button>
+          </a>
+          <a href="travel.html">
+            <button
+              class="bg-transparent hover:bg-primary hover:text-white border-2 border-primary text-primary font-bold py-3 px-8 rounded-lg transition">
+              View Tour Packages
+            </button>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <div class="py-16 bg-light text-white shapedividers_com-896"></div>
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex h-16 items-center mb-2">
+            <img src="images/InvertedLogo.png" alt="Logo" class="h-12 object-cover" />
+            <div class="flex-shrink-0 flex flex-col items-center">
+              <span class="text-2xl font-bold text-light leading-none">TICKETINS</span>
+              <span class="text-base text-light leading-tight">Travel & Tours</span>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-4">Enriching Memories</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/Ticketinstravelandtours" target="_blank"
+              class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a>
+            </li>
+            <li>
+              <a href="travel.html" class="text-gray-400 hover:text-white transition">Tour Packages</a>
+            </li>
+            <li>
+              <a href="other.html" class="text-gray-400 hover:text-white transition">Other Services</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="text-gray-400 hover:text-white transition">Gallery</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">FAQs</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>Javier Law Office Bldg., Brgy. San Miguel, Puerto Princesa,
+                Palawan 5300</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3"></i>
+              <span>ticketins@yahoo.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3"></i>
+              <span>(048) 434 1918</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-mobile-screen mr-3"></i>
+              <span>+63 992 551 5682 | Globe</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-mobile-screen mr-3"></i>
+              <span>+63 967 205 6758 | Smart</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-mobile-screen mr-3"></i>
+              <span>+63 948 392 3231 | TNT</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-xl mt-12 text-center text-light">
+        <a href="https://krakendesign.co.uk/"
+          class="inline-flex items-center gap-2 opacity-50 transition hover:opacity-100">
+          <img src="images/KrakenDesignLogo.png" alt="Kraken Designs Logo" class="h-12" />
+          Hosted by Kraken Design
+        </a>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Ticketins Travel & Tours. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="hamburger-menu.js" defer></script>
+</body>
+
+</html>

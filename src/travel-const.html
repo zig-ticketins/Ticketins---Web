@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Tour Packages - Ticketins - Travel & Tours</title>
+    <link rel="icon" href="images/LogoWhite.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-light">
+    <!--Header/Navbar (Same as other pages)-->
+    <header class="bg-white shadow-lg fixed w-full z-50 py-2">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!--Logo-->
+        <div class="flex h-16 items-center">
+          <img src="images/Logo.png" alt="Logo" class="h-16 object-cover select-none" draggable="false" />
+          <div class="flex-shrink-0 flex flex-col items-center">
+            <span class="text-2xl font-bold text-dark leading-none">TICKETINS</span>
+            <span class="text-base text-dark leading-tight">Travel & Tours</span>
+            <span class="text-xs text-dark leading-tight"
+                >Enriching Memories</span
+              >
+          </div>
+        </div>
+
+                <!--Desktop Navigation-->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-center space-x-8 max-[1066px]:space-x-3">
+                        <a href="index.html" class="text-dark font-medium hover:text-primary transition">Home</a>
+                        <a href="about.html" class="text-dark font-medium hover:text-primary transition">About Us</a>
+                        <a href="#" class="text-primary font-medium hover:text-primary transition">Tour Packages</a>
+                        <a href="other.html" class="text-dark font-medium hover:text-primary transition">Other
+                            Services</a>
+                        <a href="contact.html" class="text-dark font-medium hover:text-primary transition">Contact
+                            Us</a>
+                        <a href="gallery.html" class="text-dark font-medium hover:text-primary transition">Gallery</a>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-accent transition">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!--Mobile menu button-->
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="lg:hidden text-dark hover:text-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="top-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16" class="transition-all duration-300 origin-center transform"></path>
+                            <path id="middle-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 12h16" class="transition-all duration-300 opacity-100"></path>
+                            <path id="bottom-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 18h16" class="transition-all duration-300 origin-center transform"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!--Mobile Navigation-->
+            <div id="mobile-menu"
+                class="lg:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 flex flex-col">
+                <div class="h-[calc(100vh-60px)] overflow-y-auto pt-4 px-4">
+                    <a href="index.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Home</a>
+                    <a href="about.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">About
+                        Us</a>
+                    <a href="#"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-primary hover:bg-gray-100">Tour
+                        Packages</a>
+                    <a href="other.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Other
+                        Services</a>
+                    <a href="contact.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Contact
+                        Us</a>
+                    <a href="gallery.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Gallery</a>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200">
+                    <button class="w-full bg-primary text-white px-4 py-3 rounded-lg hover:bg-secondary transition">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Packages Hero Section-->
+        <section class="packages-hero pt-16 pb-32 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Discover Our Tours</h1>
+                <p class="text-xl max-w-3xl mx-auto">Handcrafted travel experiences designed to create unforgettable
+                    memories</p>
+            </div>
+        </section>
+
+        <!--Packages Filter Section-->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-dark mb-4 md:mb-0">Our Tour Packages</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition active"
+                            data-filter="all">All Tours</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="adventure">Adventure</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="cultural">Cultural</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="beach">Beach</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="luxury">Luxury</button>
+                    </div>
+                </div>
+
+                <!--Search and Sort-->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="md:col-span-2">
+                        <div class="relative">
+                            <input type="text" placeholder="Search destinations, tours..."
+                                class="w-full p-4 pl-12 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                            <i
+                                class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <select
+                            class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                            <option>Sort by: Recommended</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Duration: Short to Long</option>
+                            <option>Duration: Long to Short</option>
+                            <option>Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--Tour Packages Grid-->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!--Tour Package 1-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="adventure">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="European Adventure" class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Popular</div>
+                            <div
+                                class="absolute bottom-4 left-4 bg-white text-dark px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-clock mr-1"></i> 12 Days
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-dark">European Adventure</h3>
+                                <div class="text-right">
+                                    <span class="text-gray-500 line-through text-sm">$2,199</span>
+                                    <span class="text-primary font-bold block">$1,899</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>France, Italy, Spain</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Explore the best of Europe with this comprehensive tour
+                                covering iconic cities and hidden gems.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium">4.8</span>
+                                    <span class="text-gray-500 ml-1">(124 reviews)</span>
+                                </div>
+                                <button
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 2-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="beach luxury">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Bali Luxury Retreat" class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                -15%</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-dark">Bali Luxury Retreat</h3>
+                                <div class="text-right">
+                                    <span class="text-gray-500 line-through text-sm">$2,999</span>
+                                    <span class="text-primary font-bold block">$2,499</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Bali, Indonesia</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Unwind in private villas with stunning ocean views and
+                                world-class spa treatments.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium">4.9</span>
+                                    <span class="text-gray-500 ml-1">(89 reviews)</span>
+                                </div>
+                                <button
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 3-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="cultural">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80"
+                                alt="Japanese Culture" class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                                New</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-dark">Japanese Culture</h3>
+                                <span class="text-primary font-bold">$3,199</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Tokyo, Kyoto, Osaka</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Immerse yourself in Japan's rich traditions, from tea
+                                ceremonies to samurai history.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium">4.7</span>
+                                    <span class="text-gray-500 ml-1">(67 reviews)</span>
+                                </div>
+                                <button
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 4-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="adventure">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Patagonia Trek" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-dark">Patagonia Trek</h3>
+                                <span class="text-primary font-bold">$2,799</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Chile, Argentina</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Challenge yourself with this epic trek through some of the
+                                world's most stunning landscapes.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium">4.9</span>
+                                    <span class="text-gray-500 ml-1">(42 reviews)</span>
+                                </div>
+                                <button
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 5-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="luxury cultural">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1530&q=80"
+                                alt="Safari Experience" class="w-full h-64 object-cover">
+                            <div
+                                class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Limited</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-dark">African Safari</h3>
+                                <span class="text-primary font-bold">$4,299</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Kenya, Tanzania</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Witness the Great Migration from luxury tented camps with
+                                expert guides.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium">5.0</span>
+                                    <span class="text-gray-500 ml-1">(56 reviews)</span>
+                                </div>
+                                <button
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 6-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="beach">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Caribbean Cruise" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-dark">Caribbean Cruise</h3>
+                                <div class="text-right">
+                                    <span class="text-gray-500 line-through text-sm">$1,799</span>
+                                    <span class="text-primary font-bold block">$1,499</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Multiple Islands</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Island-hop through the Caribbean's most beautiful destinations
+                                on a luxury cruise.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium">4.6</span>
+                                    <span class="text-gray-500 ml-1">(93 reviews)</span>
+                                </div>
+                                <button
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Pagination-->
+                <div class="flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">2</button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">3</button>
+                        <span class="px-2">...</span>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">8</button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!--Why Choose Us Section-->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">Why Choose ExploreEra</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We go beyond ordinary travel to deliver
+                        extraordinary experiences</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-globe-americas text-primary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Local Experts</h3>
+                        <p class="text-gray-600">Our tours are designed by destination experts who know the hidden gems
+                            and authentic experiences.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                        <div
+                            class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-heart text-secondary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Small Groups</h3>
+                        <p class="text-gray-600">Enjoy more personalized attention with our small group sizes (average
+                            12 people).</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                        <div
+                            class="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-shield-alt text-yellow-500 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Peace of Mind</h3>
+                        <p class="text-gray-600">24/7 support, flexible booking options, and comprehensive travel
+                            protection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--CTA Section-->
+        <section class="py-16 bg-primary text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6">Can't Find What You're Looking For?</h2>
+                <p class="text-xl mb-8">Our travel specialists can create a custom itinerary tailored to your specific
+                    interests and budget.</p>
+                <button
+                    class="bg-white border-2 border-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-primary hover:text-white transition">Request
+                    Custom Tour</button>
+            </div>
+        </section>
+    </main>
+    <!--Footer-->
+    <div class="py-16 bg-primary text-white shapedividers_com-896">
+    </div>
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex h-16 items-center mb-2">
+                        <img src="images/InvertedLogo.png" alt="Logo" class="h-12 object-cover">
+                        <div class="flex-shrink-0 flex flex-col items-center">
+                            <span class="text-2xl font-bold text-light leading-none">TICKETINS</span>
+                            <span class="text-base text-light leading-tight">Travel & Tours</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Enriching Memories</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/Ticketinstravelandtours" target="_blank"
+                            class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="travel.html" class="text-gray-400 hover:text-white transition">Tour Packages</a>
+                        </li>
+                        <li><a href="other.html" class="text-gray-400 hover:text-white transition">Other Services</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Travel Street, Suite 456, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@exploreera.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-xl mt-12 text-center text-light">
+                <a href="https://krakendesign.co.uk/"
+                    class="inline-flex items-center gap-2  opacity-50 transition hover:opacity-100">
+                    <img src="images/KrakenDesignLogo.png" alt="Kraken Designs Logo" class="h-12">
+                    Hosted by Kraken Design
+                </a>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Ticketins Travel & Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const tourCards = document.querySelectorAll('.tour-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                tourCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="hamburger-menu.js" defer></script>
+</body>
+
+</html>

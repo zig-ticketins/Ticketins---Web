@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Gallery - Ticketins - Travel & Tours</title>
+    <link rel="icon" href="images/LogoWhite.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Updated LightGallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
+</head>
+
+<body class="bg-light">
+    <!--Header/Navbar (Same as other pages)-->
+    <header class="bg-white shadow-lg fixed w-full z-50 py-2">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!--Logo-->
+                <div class="flex h-16 items-center">
+                    <img src="images/Logo.png" alt="Logo" class="h-16 object-cover select-none" draggable="false" />
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="text-2xl font-bold text-dark leading-none">TICKETINS</span>
+                        <span class="text-base text-dark leading-tight">Travel & Tours</span>
+                        <span class="text-xs text-dark leading-tight">Enriching Memories</span>
+                    </div>
+                </div>
+
+                <!--Desktop Navigation-->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-center space-x-8 max-[1066px]:space-x-3">
+                        <a href="index.html" class="text-dark font-medium hover:text-primary transition">Home</a>
+                        <a href="about.html" class="text-dark font-medium hover:text-primary transition">About Us</a>
+                        <a href="travel.html" class="text-dark font-medium hover:text-primary transition">Tour
+                            Packages</a>
+                        <a href="other.html" class="text-dark font-medium hover:text-primary transition">Other
+                            Services</a>
+                        <a href="contact.html" class="text-dark font-medium hover:text-primary transition">Contact
+                            Us</a>
+                        <a href="#" class="text-primary font-medium hover:text-primary transition">Gallery</a>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!--Mobile menu button-->
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="lg:hidden text-dark hover:text-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="top-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16" class="transition-all duration-300 origin-center transform"></path>
+                            <path id="middle-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 12h16" class="transition-all duration-300 opacity-100"></path>
+                            <path id="bottom-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 18h16" class="transition-all duration-300 origin-center transform"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!--Mobile Navigation-->
+            <div id="mobile-menu"
+                class="lg:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 flex flex-col">
+                <div class="h-[calc(100vh-60px)] overflow-y-auto pt-4 px-4">
+                    <a href="index.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Home</a>
+                    <a href="about.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">About
+                        Us</a>
+                    <a href="travel.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Tour
+                        Packages</a>
+                    <a href="other.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Other
+                        Services</a>
+                    <a href="contact.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Contact
+                        Us</a>
+                    <a href="#"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-primary hover:bg-gray-100">Gallery</a>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200">
+                    <button class="w-full bg-primary text-white px-4 py-3 rounded-lg hover:bg-secondary transition">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Gallery Hero Section-->
+        <section class="gallery-hero pt-24 pb-32 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Travel Gallery</h1>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Explore breathtaking destinations through the eyes of our travelers
+                </p>
+            </div>
+        </section>
+
+        <!--Gallery Content-->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-dark mb-4 md:mb-0">
+                        Featured Destinations
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition active"
+                            data-filter="all">
+                            All
+                        </button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="ppc">
+                            Puerto Princesa
+                        </button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="elnido">
+                            El Nido
+                        </button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="coron">
+                            Coron
+                        </button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="balabac">
+                            Balabac
+                        </button>
+                    </div>
+                </div>
+
+                <!--Gallery Grid-->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="lightgallery">
+                    <!-- Gallery Item 1-->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/ug1.jpg"
+                        data-sub-html="<h4>Puerto Princesa, Palawan</h4><p>Underground River Boat Ride</p>"
+                        data-category="ppc">
+                        <img src="images/gallery/ug1.jpg" alt="Puerto Princesa Underground River"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">
+                                    Puerto Princesa, Palawan
+                                </h3>
+                                <p class="text-gray-200">Underground River Boat Ride</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2-->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/ug2.jpg"
+                        data-sub-html="<h4>Puerto Princesa, Palawan</h4><p>Underground River Boat Ride</p>"
+                        data-category="ppc">
+                        <img src="images/gallery/ug2.jpg" alt="Puerto Princesa Underground River"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">
+                                    Puerto Princesa, Palawan
+                                </h3>
+                                <p class="text-gray-200">Underground River Boat Ride</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 - El Nido -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/elnido1.jpg"
+                        data-sub-html="<h4>El Nido, Palawan</h4><p>Lagoon Paradise</p>" data-category="elnido">
+                        <img src="images/gallery/elnido1.jpg" alt="El Nido Lagoon"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">El Nido, Palawan</h3>
+                                <p class="text-gray-200">Lagoon Paradise</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 - Coron -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/coron1.jpg" data-sub-html="<h4>Coron, Palawan</h4><p>Kayangan Lake</p>"
+                        data-category="coron">
+                        <img src="images/gallery/coron1.jpg" alt="Coron Kayangan Lake"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Coron, Palawan</h3>
+                                <p class="text-gray-200">Kayangan Lake</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 - Balabac -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/balabac1.jpeg"
+                        data-sub-html="<h4>Balabac, Palawan</h4><p>Pristine Beaches</p>" data-category="balabac">
+                        <img src="images/gallery/balabac1.jpeg" alt="Balabac Beach"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Balabac, Palawan</h3>
+                                <p class="text-gray-200">Pristine Beaches</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 - Another Puerto Princesa -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/ug2.jpg"
+                        data-sub-html="<h4>Puerto Princesa, Palawan</h4><p>Underground River</p>" data-category="ppc">
+                        <img src="images/gallery/ug3.jpg" alt="Puerto Princesa City"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">
+                                    Puerto Princesa, Palawan
+                                </h3>
+                                <p class="text-gray-200">Underground River</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 - Another Puerto Princesa -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/starsfish1.jpg"
+                        data-sub-html="<h4>Puerto Princesa, Palawan</h4><p>City Tour</p>" data-category="ppc">
+                        <img src="images/gallery/starsfish1.jpg" alt="Puerto Princesa City"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">
+                                    Puerto Princesa, Palawan
+                                </h3>
+                                <p class="text-gray-200">Honda Bay Island Hopping</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 - Another Puerto Princesa -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/cowrie1.jpg"
+                        data-sub-html="<h4>Puerto Princesa, Palawan</h4><p>City Tour</p>" data-category="ppc">
+                        <img src="images/gallery/cowrie1.jpg" alt="Puerto Princesa City"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">
+                                    Puerto Princesa, Palawan
+                                </h3>
+                                <p class="text-gray-200">Honda Bay Island Hopping</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 8 - Another Puerto Princesa -->
+                    <div class="gallery-item group rounded-xl overflow-hidden relative cursor-pointer"
+                        data-src="images/gallery/elnido2.jpg"
+                        data-sub-html="<h4>El Nido, Palawan</h4><p>Nacpan</p>" data-category="elnido">
+                        <img src="images/gallery/elnido2.jpg" alt="El Nido"
+                            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">
+                                    El Nido, Palawan
+                                </h3>
+                                <p class="text-gray-200">Nacpan Beach</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-expand text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Load More Button-->
+                <div class="text-center mt-12">
+                    <button
+                        class="bg-transparent hover:bg-primary hover:text-white border-2 border-primary text-primary font-bold py-3 px-8 rounded-lg transition">
+                        Load More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--CTA Section-->
+        <section class="py-16 bg-primary text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6">
+                    Ready to Create Your Own Travel Memories?
+                </h2>
+                <p class="text-xl mb-8">
+                    Let our experts craft the perfect itinerary for your next adventure.
+                </p>
+                <button
+                    class="bg-white border-2 border-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-primary hover:text-white transition">
+                    Plan Your Trip
+                </button>
+            </div>
+        </section>
+    </main>
+    <!--Footer-->
+    <div class="py-16 bg-primary text-white shapedividers_com-896"></div>
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex h-16 items-center mb-2">
+                        <img src="images/InvertedLogo.png" alt="Logo" class="h-12 object-cover" />
+                        <div class="flex-shrink-0 flex flex-col items-center">
+                            <span class="text-2xl font-bold text-light leading-none">TICKETINS</span>
+                            <span class="text-base text-light leading-tight">Travel & Tours</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Enriching Memories</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/Ticketinstravelandtours" target="_blank"
+                            class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a>
+                        </li>
+                        <li>
+                            <a href="travel.html" class="text-gray-400 hover:text-white transition">Tour Packages</a>
+                        </li>
+                        <li>
+                            <a href="other.html" class="text-gray-400 hover:text-white transition">Other Services</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html" class="text-gray-400 hover:text-white transition">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Javier Law Office Bldg., Brgy. San Miguel, Puerto Princesa,
+                                Palawan 5300</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>ticketins@yahoo.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(048) 434 1918</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-screen mr-3"></i>
+                            <span>+63 992 551 5682 | Globe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-screen mr-3"></i>
+                            <span>+63 967 205 6758 | Smart</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-screen mr-3"></i>
+                            <span>+63 948 392 3231 | TNT</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-xl mt-12 text-center text-light">
+                <a href="https://krakendesign.co.uk/"
+                    class="inline-flex items-center gap-2 opacity-50 transition hover:opacity-100">
+                    <img src="images/KrakenDesignLogo.png" alt="Kraken Designs Logo" class="h-12" />
+                    Hosted by Kraken Design
+                </a>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Ticketins Travel & Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Updated LightGallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/fullscreen/lg-fullscreen.min.js"></script>
+
+    <script>
+        // Gallery initialization config
+        const galleryConfig = {
+            plugins: [lgZoom, lgThumbnail, lgFullscreen],
+            selector: ".gallery-item",
+            speed: 500,
+            thumbnail: true,
+            download: false,
+            zoomFromOrigin: false,
+            allowMediaOverlap: true,
+            toggleThumb: true,
+            showMaximizeIcon: true,
+            mousewheelZoom: true,
+            counter: true,
+            closable: true,
+            swipeToClose: true,
+            loop: true,
+            hideBarsDelay: 2000,
+            showCloseIcon: true,
+            showThumbByDefault: true,
+            thumbWidth: 100,
+            thumbHeight: 80,
+            thumbMargin: 5,
+            enableThumbDrag: true,
+            enableThumbSwipe: true,
+            videoAutoplay: true,
+            gotoNextSlideOnVideoEnd: true,
+        };
+
+        // Initial LightGallery instance
+        let galleryInstance = lightGallery(
+            document.getElementById("lightgallery"),
+            galleryConfig
+        );
+
+        // Filter buttons and gallery items
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const galleryItems = document.querySelectorAll(".gallery-item");
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                // Update active state
+                filterButtons.forEach((btn) => {
+                    btn.classList.remove("active", "bg-primary", "text-white");
+                    btn.classList.add("border-gray-300");
+                });
+                button.classList.add("active", "bg-primary", "text-white");
+                button.classList.remove("border-gray-300");
+
+                const filterValue = button.getAttribute("data-filter");
+
+                // Destroy existing gallery
+                if (galleryInstance) {
+                    galleryInstance.destroy(true);
+                }
+
+                // Filter gallery items
+                galleryItems.forEach((item) => {
+                    item.style.display =
+                        filterValue === "all" || item.dataset.category === filterValue
+                            ? "block"
+                            : "none";
+                });
+
+                // Reinitialize LightGallery after filtering
+                setTimeout(() => {
+                    galleryInstance = lightGallery(
+                        document.getElementById("lightgallery"),
+                        galleryConfig
+                    );
+                }, 100);
+            });
+        });
+    </script>
+    <script src="hamburger-menu.js" defer></script>
+</body>
+
+</html>
