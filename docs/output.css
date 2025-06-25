@@ -21,6 +21,7 @@
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-800: oklch(44.8% 0.119 151.328);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-pink-200: oklch(89.9% 0.061 343.231);
@@ -871,6 +872,9 @@
   .text-accent {
     color: #64dbd3;
   }
+  .text-blue-600 {
+    color: var(--color-blue-600);
+  }
   .text-dark {
     color: #000D1F;
   }
@@ -1093,6 +1097,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-white);
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
       }
     }
   }

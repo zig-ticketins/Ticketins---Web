@@ -1,379 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <title>Ticketins - Travel & Tours</title>
-    <link rel="icon" href="images/LogoWhite.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
 
-  <body class="bg-light">
-    <!--Navbar-->
-    <header class="bg-white shadow-lg fixed w-full z-50 py-2">
-      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-          <!--Logo-->
-          <div class="flex h-16 items-center">
-            <img
-              src="images/Logo.png"
-              alt="Logo"
-              class="h-16 object-cover select-none"
-              draggable="false"
-            />
-            <div class="flex-shrink-0 flex flex-col items-center">
-              <span class="text-2xl font-bold text-dark leading-none"
-                >TICKETINS</span
-              >
-              <span class="text-base text-dark leading-tight"
-                >Travel & Tours</span
-              >
-              <span class="text-xs text-dark leading-tight"
-                >Enriching Memories</span
-              >
-            </div>
-          </div>
-          <!--Desktop Navigation-->
-          <div class="hidden lg:block">
-            <div
-              class="ml-10 flex items-center space-x-8 max-[1066px]:space-x-3"
-            >
-              <a
-                href="#"
-                class="text-primary font-medium hover:text-primary transition"
-                >Home</a
-              >
-              <a
-                href="about.html"
-                class="text-dark font-medium hover:text-primary transition"
-                >About Us</a
-              >
-              <a
-                href="travel.html"
-                class="text-dark font-medium hover:text-primary transition"
-                >Tour Packages</a
-              >
-              <a
-                href="other.html"
-                class="text-dark font-medium hover:text-primary transition"
-                >Other Services</a
-              >
-              <a
-                href="contact.html"
-                class="text-dark font-medium hover:text-primary transition"
-                >Contact Us</a
-              >
-              <a
-                href="gallery.html"
-                class="text-dark font-medium hover:text-primary transition"
-                >Gallery</a
-              >
-              <button
-                class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <title>Ticketins - Travel & Tours</title>
+  <link rel="icon" href="images/LogoWhite.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
 
-          <!--Mobile menu button-->
-          <div class="lg:hidden">
-            <button
-              id="menu-toggle"
-              class="lg:hidden text-dark hover:text-secondary focus:outline-none"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  id="top-line"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16"
-                  class="transition-all duration-300 origin-center transform"
-                ></path>
-                <path
-                  id="middle-line"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 12h16"
-                  class="transition-all duration-300 opacity-100"
-                ></path>
-                <path
-                  id="bottom-line"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 18h16"
-                  class="transition-all duration-300 origin-center transform"
-                ></path>
-              </svg>
-            </button>
+<body class="bg-light">
+  <!--Navbar-->
+  <header class="bg-white shadow-lg fixed w-full z-50 py-2">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!--Logo-->
+        <div class="flex h-16 items-center">
+          <img src="images/Logo.png" alt="Logo" class="h-16 object-cover select-none" draggable="false" />
+          <div class="flex-shrink-0 flex flex-col items-center">
+            <span class="text-2xl font-bold text-dark leading-none">TICKETINS</span>
+            <span class="text-base text-dark leading-tight">Travel & Tours</span>
+            <span class="text-xs text-dark leading-tight">Enriching Memories</span>
           </div>
         </div>
-
-        <!--Mobile Navigation-->
-        <div
-          id="mobile-menu"
-          class="lg:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 flex flex-col"
-        >
-          <div class="h-[calc(100vh-60px)] overflow-y-auto pt-4 px-4">
-            <a
-              href="#"
-              class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100"
-              >Home</a
-            >
-            <a
-              href="about.html"
-              class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100"
-              >About Us</a
-            >
-            <a
-              href="travel.html"
-              class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100"
-              >Tour Packages</a
-            >
-            <a
-              href="other.html"
-              class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100"
-              >Other Services</a
-            >
-            <a
-              href="contact.html"
-              class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100"
-              >Contact Us</a
-            >
-            <a
-              href="gallery.html"
-              class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100"
-              >Gallery</a
-            >
-          </div>
-          <div
-            class="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200"
-          >
-            <button
-              class="w-full bg-primary text-white px-4 py-3 rounded-lg hover:bg-secondary transition"
-            >
+        <!--Desktop Navigation-->
+        <div class="hidden lg:block">
+          <div class="ml-10 flex items-center space-x-8 max-[1066px]:space-x-3">
+            <a href="#" class="text-primary font-medium hover:text-primary transition">Home</a>
+            <a href="about.html" class="text-dark font-medium hover:text-primary transition">About Us</a>
+            <a href="travel.html" class="text-dark font-medium hover:text-primary transition">Tour Packages</a>
+            <a href="other.html" class="text-dark font-medium hover:text-primary transition">Other Services</a>
+            <a href="contact.html" class="text-dark font-medium hover:text-primary transition">Contact Us</a>
+            <a href="gallery.html" class="text-dark font-medium hover:text-primary transition">Gallery</a>
+            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
               Book Now
             </button>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <!--Hero Section-->
-      <section class="hero-image pt-16 pb-32 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-          <div class="lg:w-1/2">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">
-              Discover Your Dream Vacation
-            </h1>
-            <p class="text-xl mb-8">
-              Explore the world's most breathtaking destinations with our
-              expertly crafted tour packages tailored to your travel style.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#Featured-Tours">
-                <button
-                  class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition"
-                >
-                  Explore Tours
-                </button>
-              </a>
-              <a href="about.html">
-                <button
-                  class="bg-transparent hover:bg-white hover:text-dark border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition"
-                >
-                  More Info
-                </button>
-              </a>
-            </div>
+
+        <!--Mobile menu button-->
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="lg:hidden text-dark hover:text-secondary focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path id="top-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"
+                class="transition-all duration-300 origin-center transform"></path>
+              <path id="middle-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"
+                class="transition-all duration-300 opacity-100"></path>
+              <path id="bottom-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"
+                class="transition-all duration-300 origin-center transform"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!--Mobile Navigation-->
+      <div id="mobile-menu"
+        class="lg:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 flex flex-col">
+        <div class="h-[calc(100vh-60px)] overflow-y-auto pt-4 px-4">
+          <a href="#" class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Home</a>
+          <a href="about.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">About Us</a>
+          <a href="travel.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Tour Packages</a>
+          <a href="other.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Other Services</a>
+          <a href="contact.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Contact Us</a>
+          <a href="gallery.html"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Gallery</a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200">
+          <button class="w-full bg-primary text-white px-4 py-3 rounded-lg hover:bg-secondary transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!--Hero Section-->
+    <section class="hero-image pt-16 pb-32 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+        <div class="lg:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Discover Your Dream Vacation
+          </h1>
+          <p class="text-xl mb-8">
+            Explore the world's most breathtaking destinations with our
+            expertly crafted tour packages tailored to your travel style.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#Featured-Tours">
+              <button class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                Explore Tours
+              </button>
+            </a>
+            <a href="about.html">
+              <button
+                class="bg-transparent hover:bg-white hover:text-dark border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition">
+                More Info
+              </button>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--Featured Tours-->
-      <section class="py-16 bg-white" id="Featured-Tours">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-dark mb-4">
-              Featured Tour Packages
-            </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our handpicked selection of unforgettable travel
-              experiences around Palawan.
-            </p>
+    <!--Featured Tours-->
+    <section class="py-16 bg-white" id="Featured-Tours">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-dark mb-4">
+            Featured Tour Packages
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore our handpicked selection of unforgettable travel
+            experiences around Palawan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 min-[71rem]:grid-cols-3 gap-8">
+          <!--Tour Card 1 Underground-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+            <div class="relative">
+              <img src="images/tp_underground.jpg" alt="Tropical Paradise" class="w-full h-64 object-cover" />
+              <div
+                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                ㅤㅤㅤㅤ
+              </div>
+              <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Best Seller
+              </div>
+            </div>
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-dark mb-2">
+                  Underground River
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4 text-sm">
+                Row through one of the New 7 Wonders of Nature with stunning
+                natural rock formations.
+              </p>
+              <div class="flex items-center text-gray-500 mb-4 mt-4">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Puerto Princesa, Palawan</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                  <span class="text-primary text-2xl font-bold">₱2,700</span>
+                  <span class="text-primary text-md">per person</span>
+                </div>
+                <a href="tours/hondabay.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                  Package</a>
+              </div>
+            </div>
           </div>
-
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 min-[71rem]:grid-cols-3 gap-8"
-          >
-            <!--Tour Card 1 Underground-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300"
-            >
-              <div class="relative">
-                <img
-                  src="images/tp_underground.jpg"
-                  alt="Tropical Paradise"
-                  class="w-full h-64 object-cover"
-                />
-                <div
-                  class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping"
-                >
-                  ㅤㅤㅤㅤ
-                </div>
-                <div
-                  class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium"
-                >
-                  Best Seller
-                </div>
-              </div>
-              <div class="p-6 px-8">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-2xl font-bold text-dark mb-2">
-                    Underground River
-                  </h3>
-                </div>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Row through one of the New 7 Wonders of Nature with stunning
-                  natural rock formations.
-                </p>
-                <div class="flex items-center text-gray-500 mb-4 mt-4">
-                  <i class="fas fa-map-marker-alt mr-2"></i>
-                  <span>Puerto Princesa, Palawan</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div class="flex flex-col items-center">
-                    <span class="text-primary text-2xl font-bold">₱2,700</span>
-                    <span class="text-primary text-md">per person</span>
-                  </div>
-                  <a
-                    href="tours/hondabay.html"
-                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
-                    >View Package</a
-                  >
-                </div>
+          <!--Tour Card 2 El Nido-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+            <div class="relative">
+              <img src="images/tp_elnido.jpg" alt="Tropical Paradise" class="w-full h-64 object-cover" />
+              <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                Popular
               </div>
             </div>
-            <!--Tour Card 2 El Nido-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300"
-            >
-              <div class="relative">
-                <img
-                  src="images/tp_elnido.jpg"
-                  alt="Tropical Paradise"
-                  class="w-full h-64 object-cover"
-                />
-                <div
-                  class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
-                >
-                  Popular
-                </div>
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-dark mb-2">El Nido</h3>
               </div>
-              <div class="p-6 px-8">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-2xl font-bold text-dark mb-2">El Nido</h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Explore stunning lagoons, white sand beaches, and towering
+                limestone cliffs in paradise.
+              </p>
+              <div class="flex items-center text-gray-500 mb-4 mt-4">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>El Nido, Palawan</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                  <span class="text-primary text-2xl font-bold">₱4,599</span>
+                  <span class="text-primary text-md">per person</span>
                 </div>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Explore stunning lagoons, white sand beaches, and towering
-                  limestone cliffs in paradise.
-                </p>
-                <div class="flex items-center text-gray-500 mb-4 mt-4">
-                  <i class="fas fa-map-marker-alt mr-2"></i>
-                  <span>El Nido, Palawan</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div class="flex flex-col items-center">
-                    <span class="text-primary text-2xl font-bold">₱4,599</span>
-                    <span class="text-primary text-md">per person</span>
-                  </div>
-                  <a
-                    href="tours/hondabay.html"
-                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
-                    >View Package</a
-                  >
-                </div>
+                <a href="tours/hondabay.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                  Package</a>
               </div>
             </div>
-            <!--Tour Card 3 Coron-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300"
-            >
-              <div class="relative">
-                <img
-                  src="images/tp_coron.jpg"
-                  alt="Japanese Culture"
-                  class="w-full h-64 object-cover"
-                />
-                <div
-                  class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
-                >
-                  Popular
-                </div>
+          </div>
+          <!--Tour Card 3 Coron-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+            <div class="relative">
+              <img src="images/tp_coron.jpg" alt="Japanese Culture" class="w-full h-64 object-cover" />
+              <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                Popular
               </div>
-              <div class="p-6 px-8">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-2xl font-bold text-dark mb-2">Coron</h3>
-                </div>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Swim in crystal-clear lakes, snorkel vibrant reefs, and
-                  explore WWII shipwrecks in Coron.
-                </p>
-                <div class="flex items-center text-gray-500 mb-4 mt-4">
-                  <i class="fas fa-map-marker-alt mr-2"></i>
-                  <span>Coron, Palawan</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div class="flex flex-col items-center">
-                    <!-- <span class="text-primary text-2xl font-bold">₱1,699</span>
+            </div>
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-dark mb-2">Coron</h3>
+              </div>
+              <p class="text-gray-600 mb-4 text-sm">
+                Swim in crystal-clear lakes, snorkel vibrant reefs, and
+                explore WWII shipwrecks in Coron.
+              </p>
+              <div class="flex items-center text-gray-500 mb-4 mt-4">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Coron, Palawan</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                  <!-- <span class="text-primary text-2xl font-bold">₱1,699</span>
                   <span class="text-primary text-md">per person</span> -->
-                  </div>
-                  <a
-                    href="tours/hondabay.html"
-                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
-                    >View Package</a
-                  >
                 </div>
+                <a href="tours/hondabay.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                  Package</a>
               </div>
             </div>
-            <!--Tour Card 4 Honda Bay-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300"
-            >
-              <div class="relative">
-                <img
-                  src="images/tp_cowrie.jpg"
-                  alt="Cowrie Island"
-                  class="w-full h-64 object-cover"
-                />
+          </div>
+          <!--Tour Card 4 Honda Bay-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+            <div class="relative">
+              <img src="images/tp_cowrie.jpg" alt="Cowrie Island" class="w-full h-64 object-cover" />
+            </div>
+
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-dark mb-2">Honda Bay Island Hopping</h3>
               </div>
-              <div class="p-6 px-8">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-2xl font-bold text-dark mb-2">
-                    Honda Bay Island Hopping
-                  </h3>
-                </div>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Island-hopping tour featuring Cowrie Island, Starfish Island,
-                  and Luli Island.
-                </p>
-                <p class="font-bold text-gray-600 hidden">Inclusions:</p>
-                <ul
-                  class="grid grid-cols-2 gap-x-4 text-gray-600 text-xs hidden"
-                >
+
+              <p class="text-gray-600 mb-4 text-sm">
+                Island-hopping tour featuring Cowrie Island, Starfish Island, and Luli Island.
+              </p>
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                const inclusions = document.getElementById('inclusions');
+                const icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                const isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-blue-600 text-sm font-medium hover:underline inline-block mb-2 cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+              <!-- Inclusions Section (hidden by default) -->
+              <div id="inclusions" class="hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
                   <li>• Entrance Fee</li>
                   <li>• Environmental Fee</li>
                   <li>• Buffet Lunch</li>
@@ -383,210 +259,168 @@
                   <li>• Life Vest</li>
                   <li>• Travel Insurance</li>
                 </ul>
-                <div class="flex items-center text-gray-500 mb-4 mt-4">
-                  <i class="fas fa-map-marker-alt mr-2"></i>
-                  <span>Puerto Princesa, Palawan</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div class="flex flex-col items-center">
-                    <span class="text-primary text-2xl font-bold">₱1,800</span>
-                    <span class="text-primary text-md">per person</span>
-                  </div>
-                  <a
-                    href="tours/hondabay.html"
-                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
-                    >View Package</a
-                  >
-                </div>
               </div>
-            </div>
-            <!--Tour Card 5 Port Barton-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300"
-            >
-              <div class="relative">
-                <img
-                  src="images/tp_portbarton.jpeg"
-                  alt="Japanese Culture"
-                  class="w-full h-64 object-cover"
-                />
-              </div>
-              <div class="p-6 px-8">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-2xl font-bold text-dark mb-2">Port Barton</h3>
-                </div>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Unwind in hidden beaches, snorkel coral-rich waters, and enjoy
-                  the peaceful charm of this coastal gem.
-                </p>
-                <div class="flex items-center text-gray-500 mb-4 mt-4">
-                  <i class="fas fa-map-marker-alt mr-2"></i>
-                  <span>San Vicente, Palawan</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div class="flex flex-col items-center">
-                    <!-- <span class="text-primary text-2xl font-bold">₱1,800</span>
-                  <span class="text-primary text-md">per person</span> -->
-                  </div>
-                  <a
-                    href="tours/hondabay.html"
-                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
-                    >View Package</a
-                  >
-                </div>
-              </div>
-            </div>
-            <!--Tour Card 6 Balabac-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300"
-            >
-              <div class="relative">
-                <img
-                  src="images/tp_balabac.jpeg"
-                  alt="Cowrie Island"
-                  class="w-full h-64 object-cover"
-                />
-              </div>
-              <div class="p-6 px-8">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-2xl font-bold text-dark mb-2">Balabac</h3>
-                </div>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Discover untouched islands, turquoise waters, and some of
-                  Palawan’s most secluded white sand beaches.
-                </p>
-                <div class="flex items-center text-gray-500 mb-4 mt-4">
-                  <i class="fas fa-map-marker-alt mr-2"></i>
-                  <span>Balabac, Palawan</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div class="flex flex-col items-center">
-                    <!-- <span class="text-primary text-2xl font-bold">₱1,800</span>
-                  <span class="text-primary text-md">per person</span> -->
-                  </div>
-                  <a
-                    href="tours/hondabay.html"
-                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
-                    >View Package</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="text-center mt-12">
-            <a href="travel.html">
-              <button
-                class="bg-transparent hover:bg-primary hover:text-white border-2 border-primary text-primary font-bold py-3 px-8 rounded-lg transition"
-              >
-                View All Packages
-              </button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!--Special Offers-->
-      <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-dark mb-4">
-              Special Offers & Discounts
-            </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-              Limited time deals to make your dream vacation more affordable.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!--Offer 1-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="md:w-1/2">
-                <img
-                  src="images/2GoPromo.jpg"
-                  alt="Family Package"
-                  class="w-full h-full object-cover"
-                />
+              <div class="flex items-center text-gray-500 mb-4 mt-4">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Puerto Princesa, Palawan</span>
               </div>
-              <div class="p-6 md:w-1/2">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-xl font-bold text-dark">Family Package</h3>
-                  <span
-                    class="bg-pink-500 text-light px-2 py-1 rounded text-sm font-medium"
-                    >New</span
-                  >
-                </div>
-                <p class="text-gray-600 mb-4">
-                  Start planning your <b>June sailing</b> journey because with
-                  2GO, you can travel to up to 19 Philippine destinations!
-                </p>
-                <div class="flex items-center text-gray-500 mb-4">
-                  <i class="fas fa-calendar-alt mr-2"></i>
-                  <span>Limited offer</span>
-                </div>
-                <a
-                  href="https://www.facebook.com/share/p/19ovKqmVkG/"
-                  target="_blank"
-                >
-                  <button
-                    class="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-lg transition"
-                  >
-                    More Info
-                  </button>
-                </a>
-              </div>
-            </div>
 
-            <!--Offer 2-->
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="md:w-1/2">
-                <img
-                  src="images/AirAsiaPromo.jpg"
-                  alt="Family Package"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="p-6 md:w-1/2">
-                <div class="flex justify-between items-start mb-2">
-                  <h3 class="text-xl font-bold text-dark">Family Package</h3>
-                  <span
-                    class="bg-red-500 text-light px-2 py-1 rounded text-sm font-medium"
-                    >Promo</span
-                  >
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                  <span class="text-primary text-2xl font-bold">₱1,900</span>
+                  <span class="text-primary text-md">per person</span>
                 </div>
-                <p class="text-gray-600 mb-4">
-                  Enjoy up to 15% OFF on AirAsia flights when you book with us!
-                  <br />
-                  Booking Period: June 9-17, 2025
-                  <br />
-                  Travel Period: June 9-Nov 30, 2025
-                </p>
-                <div class="flex items-center text-gray-500 mb-4">
-                  <i class="fas fa-calendar-alt mr-2"></i>
-                  <span>Limited offer</span>
-                </div>
-                <a
-                  href="https://www.facebook.com/share/p/14EJpWVoA2E/"
-                  target="_blank"
-                >
-                  <button
-                    class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition"
-                  >
-                    More Info
-                  </button>
+                <a href="tours/hondabay.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                  View Package
                 </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!--Testimonials-->
-      <!-- <section class="py-16 bg-white">
+          <!--Tour Card 5 Port Barton-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+            <div class="relative">
+              <img src="images/tp_portbarton.jpeg" alt="Japanese Culture" class="w-full h-64 object-cover" />
+            </div>
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-dark mb-2">Port Barton</h3>
+              </div>
+              <p class="text-gray-600 mb-4 text-sm">
+                Unwind in hidden beaches, snorkel coral-rich waters, and enjoy
+                the peaceful charm of this coastal gem.
+              </p>
+              <div class="flex items-center text-gray-500 mb-4 mt-4">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>San Vicente, Palawan</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                  <!-- <span class="text-primary text-2xl font-bold">₱1,800</span>
+                  <span class="text-primary text-md">per person</span> -->
+                </div>
+                <a href="tours/hondabay.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                  Package</a>
+              </div>
+            </div>
+          </div>
+          <!--Tour Card 6 Balabac-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+            <div class="relative">
+              <img src="images/tp_balabac.jpeg" alt="Cowrie Island" class="w-full h-64 object-cover" />
+            </div>
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-dark mb-2">Balabac</h3>
+              </div>
+              <p class="text-gray-600 mb-4 text-sm">
+                Discover untouched islands, turquoise waters, and some of
+                Palawan’s most secluded white sand beaches.
+              </p>
+              <div class="flex items-center text-gray-500 mb-4 mt-4">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Balabac, Palawan</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                  <!-- <span class="text-primary text-2xl font-bold">₱1,800</span>
+                  <span class="text-primary text-md">per person</span> -->
+                </div>
+                <a href="tours/hondabay.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                  Package</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="travel.html">
+            <button
+              class="bg-transparent hover:bg-primary hover:text-white border-2 border-primary text-primary font-bold py-3 px-8 rounded-lg transition">
+              View All Packages
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--Special Offers-->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-dark mb-4">
+            Special Offers & Discounts
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Limited time deals to make your dream vacation more affordable.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!--Offer 1-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/2">
+              <img src="images/2GoPromo.jpg" alt="Family Package" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6 md:w-1/2">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-dark">Family Package</h3>
+                <span class="bg-pink-500 text-light px-2 py-1 rounded text-sm font-medium">New</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Start planning your <b>June sailing</b> journey because with
+                2GO, you can travel to up to 19 Philippine destinations!
+              </p>
+              <div class="flex items-center text-gray-500 mb-4">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span>Limited offer</span>
+              </div>
+              <a href="https://www.facebook.com/share/p/19ovKqmVkG/" target="_blank">
+                <button class="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-lg transition">
+                  More Info
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!--Offer 2-->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/2">
+              <img src="images/AirAsiaPromo.jpg" alt="Family Package" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6 md:w-1/2">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-dark">Family Package</h3>
+                <span class="bg-red-500 text-light px-2 py-1 rounded text-sm font-medium">Promo</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Enjoy up to 15% OFF on AirAsia flights when you book with us!
+                <br />
+                Booking Period: June 9-17, 2025
+                <br />
+                Travel Period: June 9-Nov 30, 2025
+              </p>
+              <div class="flex items-center text-gray-500 mb-4">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span>Limited offer</span>
+              </div>
+              <a href="https://www.facebook.com/share/p/14EJpWVoA2E/" target="_blank">
+                <button class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition">
+                  More Info
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Testimonials-->
+    <!-- <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-dark mb-4">
@@ -680,200 +514,136 @@
       </div>
     </section> -->
 
-      <!--Newsletter-->
-      <section class="py-16 bg-primary text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 class="text-3xl font-bold mb-4">
-            Stay Updated with Our Latest Deals
-          </h2>
-          <p class="text-lg mb-8">
-            Subscribe to our newsletter and never miss out on exclusive travel
-            offers and inspiration.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              class="bg-white flex-grow p-3 rounded-lg text-dark focus:outline-none focus:ring-2 focus:ring-blue-800"
-            />
-            <button
-              class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!--Footer-->
-    <div class="py-16 bg-primary text-white shapedividers_com-896"></div>
-    <footer class="bg-dark text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div class="flex h-16 items-center mb-2">
-              <img
-                src="images/InvertedLogo.png"
-                alt="Logo"
-                class="h-12 object-cover"
-              />
-              <div class="flex-shrink-0 flex flex-col items-center">
-                <span class="text-2xl font-bold text-light leading-none"
-                  >TICKETINS</span
-                >
-                <span class="text-base text-light leading-tight"
-                  >Travel & Tours</span
-                >
-              </div>
-            </div>
-            <p class="text-gray-400 mb-4">Enriching Memories</p>
-            <div class="flex space-x-4">
-              <a
-                href="https://www.facebook.com/Ticketinstravelandtours"
-                target="_blank"
-                class="text-gray-400 hover:text-white transition"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white transition"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white transition"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white transition"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-gray-400 hover:text-white transition"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="text-gray-400 hover:text-white transition"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="travel.html"
-                  class="text-gray-400 hover:text-white transition"
-                  >Tour Packages</a
-                >
-              </li>
-              <li>
-                <a
-                  href="other.html"
-                  class="text-gray-400 hover:text-white transition"
-                  >Other Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-gray-400 hover:text-white transition"
-                  >Contact Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="gallery.html"
-                  class="text-gray-400 hover:text-white transition"
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Support</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="text-gray-400 hover:text-white transition"
-                  >FAQs</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-400 hover:text-white transition"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-400 hover:text-white transition"
-                  >Terms & Conditions</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-400 hover:text-white transition"
-                  >Blog</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex items-start">
-                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                <span
-                  >Javier Law Office Bldg., Brgy. San Miguel, Puerto Princesa,
-                  Palawan 5300</span
-                >
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-envelope mr-3"></i>
-                <span>ticketins@yahoo.com</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-phone-alt mr-3"></i>
-                <span>(048) 434 1918</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-mobile-screen mr-3"></i>
-                <span>+63 992 551 5682 | Globe</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-mobile-screen mr-3"></i>
-                <span>+63 967 205 6758 | Smart</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-mobile-screen mr-3"></i>
-                <span>+63 948 392 3231 | TNT</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="text-xl mt-12 text-center text-light">
-          <a
-            href="https://krakendesign.co.uk/"
-            class="inline-flex items-center gap-2 opacity-50 transition hover:opacity-100"
-          >
-            <img
-              src="images/KrakenDesignLogo.png"
-              alt="Kraken Designs Logo"
-              class="h-12"
-            />
-            Hosted by Kraken Design
-          </a>
-        </div>
-        <div
-          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
-        >
-          <p>&copy; 2025 Ticketins Travel & Tours. All rights reserved.</p>
+    <!--Newsletter-->
+    <section class="py-16 bg-primary text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Stay Updated with Our Latest Deals
+        </h2>
+        <p class="text-lg mb-8">
+          Subscribe to our newsletter and never miss out on exclusive travel
+          offers and inspiration.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input type="email" placeholder="Your email address"
+            class="bg-white flex-grow p-3 rounded-lg text-dark focus:outline-none focus:ring-2 focus:ring-blue-800" />
+          <button class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition">
+            Subscribe
+          </button>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
+  <!--Footer-->
+  <div class="py-16 bg-primary text-white shapedividers_com-896"></div>
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex h-16 items-center mb-2">
+            <img src="images/InvertedLogo.png" alt="Logo" class="h-12 object-cover" />
+            <div class="flex-shrink-0 flex flex-col items-center">
+              <span class="text-2xl font-bold text-light leading-none">TICKETINS</span>
+              <span class="text-base text-light leading-tight">Travel & Tours</span>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-4">Enriching Memories</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/Ticketinstravelandtours" target="_blank"
+              class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
 
-    <script src="hamburger-menu.js" defer></script>
-  </body>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a>
+            </li>
+            <li>
+              <a href="travel.html" class="text-gray-400 hover:text-white transition">Tour Packages</a>
+            </li>
+            <li>
+              <a href="other.html" class="text-gray-400 hover:text-white transition">Other Services</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="text-gray-400 hover:text-white transition">Gallery</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">FAQs</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>Javier Law Office Bldg., Brgy. San Miguel, Puerto Princesa,
+                Palawan 5300</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3"></i>
+              <span>ticketins@yahoo.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3"></i>
+              <span>(048) 434 1918</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-mobile-screen mr-3"></i>
+              <span>+63 992 551 5682 | Globe</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-mobile-screen mr-3"></i>
+              <span>+63 967 205 6758 | Smart</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-mobile-screen mr-3"></i>
+              <span>+63 948 392 3231 | TNT</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-xl mt-12 text-center text-light">
+        <a href="https://krakendesign.co.uk/"
+          class="inline-flex items-center gap-2 opacity-50 transition hover:opacity-100">
+          <img src="images/KrakenDesignLogo.png" alt="Kraken Designs Logo" class="h-12" />
+          Hosted by Kraken Design
+        </a>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Ticketins Travel & Tours. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="hamburger-menu.js" defer></script>
+</body>
+
 </html>
