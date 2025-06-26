@@ -622,6 +622,9 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-accent {
+    background-color: #64dbd3;
+  }
   .bg-dark {
     background-color: #000D1F;
   }
@@ -1262,12 +1265,6 @@
   .md\:p-12 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 12);
-    }
-  }
-  .md\:text-2xl {
-    @media (width >= 48rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .md\:text-5xl {
