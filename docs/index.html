@@ -110,20 +110,31 @@
 
     <!--Featured Tours-->
     <section class="py-16 bg-white" id="Featured-Tours">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-dark mb-4">
-            Featured Tour Packages
-          </h2>
+          <h2 class="text-3xl font-bold text-dark mb-4">Featured Tour Packages</h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             Looking for the best travel destination? Check out our handpicked selection of unforgettable tourist spots
             around Palawan.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 min-[71rem]:grid-cols-3 gap-8">
+        <button onclick="scrollSlider(-1)"
+          class="flex md:hidden items-center justify-center absolute left-2 top-1/2 transform -translate-y-1/2 bg-primary/80 shadow-md w-8 h-8 rounded-full z-10">
+          <i class="fas fa-chevron-left text-sm text-light"></i>
+        </button>
+
+        <button onclick="scrollSlider(1)"
+          class="flex md:hidden items-center justify-center absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary/80 shadow-md w-8 h-8 rounded-full z-10">
+          <i class="fas fa-chevron-right text-sm text-light"></i>
+        </button>
+
+        <!-- Cards Wrapper -->
+        <div id="slider"
+          class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth no-scrollbar pb-4 md:pb-0">
+
           <!--Tour Card 1 Underground-->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
               <img src="images/tp_underground.jpg" alt="Tropical Paradise" class="w-full h-64 object-cover" />
               <div
@@ -140,18 +151,41 @@
                   Underground River
                 </h3>
               </div>
-              <p class="text-gray-600 mb-4 text-sm">
+              <p class="text-gray-600 mb-1 text-sm">
                 Row through one of the New 7 Wonders of Nature with stunning
                 natural rock formations.
               </p>
-              <div class="flex items-center text-gray-500 mb-4 mt-4">
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm font-medium hover:underline inline-block cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                  <li>• Temporary Placeholder</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center text-gray-500 mb-4 mt-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>Puerto Princesa, Palawan</span>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex flex-col items-center">
-                  <span class="text-primary text-2xl font-bold">₱2,700</span>
-                  <span class="text-primary text-md">per person</span>
+                <div class="flex flex-col items-left">
+                  <span class="text-primary text-lg md:text-2xl font-bold">₱2,700</span>
+                  <span class="text-primary text-sm md:text-md">per person</span>
                 </div>
                 <a href="tours/hondabay.html"
                   class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
@@ -160,7 +194,7 @@
             </div>
           </div>
           <!--Tour Card 2 El Nido-->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
               <img src="images/tp_elnido.jpg" alt="Tropical Paradise" class="w-full h-64 object-cover" />
               <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -171,18 +205,41 @@
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-2xl font-bold text-dark mb-2">El Nido</h3>
               </div>
-              <p class="text-gray-600 mb-4 text-sm">
+              <p class="text-gray-600 mb-1 text-sm">
                 Explore stunning lagoons, white sand beaches, and towering
                 limestone cliffs in paradise.
               </p>
-              <div class="flex items-center text-gray-500 mb-4 mt-4">
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm font-medium hover:underline inline-block cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                  <li>• Temporary Placeholder</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center text-gray-500 mb-4 mt-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>El Nido, Palawan</span>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex flex-col items-center">
-                  <span class="text-primary text-2xl font-bold">₱4,599</span>
-                  <span class="text-primary text-md">per person</span>
+                <div class="flex flex-col items-left">
+                  <span class="text-primary text-lg md:text-2xl font-bold">₱4,599</span>
+                  <span class="text-primary text-sm md:text-md">per person</span>
                 </div>
                 <a href="tours/hondabay.html"
                   class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
@@ -191,7 +248,7 @@
             </div>
           </div>
           <!--Tour Card 3 Coron-->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
               <img src="images/tp_coron.jpg" alt="Japanese Culture" class="w-full h-64 object-cover" />
               <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -202,18 +259,41 @@
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-2xl font-bold text-dark mb-2">Coron</h3>
               </div>
-              <p class="text-gray-600 mb-4 text-sm">
+              <p class="text-gray-600 mb-1 text-sm">
                 Swim in crystal-clear lakes, snorkel vibrant reefs, and
                 explore WWII shipwrecks in Coron.
               </p>
-              <div class="flex items-center text-gray-500 mb-4 mt-4">
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm font-medium hover:underline inline-block cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                  <li>• Temporary Placeholder</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center text-gray-500 mb-4 mt-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>Coron, Palawan</span>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex flex-col items-center">
-                  <!-- <span class="text-primary text-2xl font-bold">₱1,699</span>
-                  <span class="text-primary text-md">per person</span> -->
+                <div class="flex flex-col items-left">
+                  <!-- <span class="text-primary text-lg md:text-2xl font-bold">₱1,699</span>
+                  <span class="text-primary text-sm md:text-md">per person</span> -->
                 </div>
                 <a href="tours/hondabay.html"
                   class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
@@ -222,7 +302,7 @@
             </div>
           </div>
           <!--Tour Card 4 Honda Bay-->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
               <img src="images/tp_cowrie.jpg" alt="Cowrie Island" class="w-full h-64 object-cover" />
             </div>
@@ -232,23 +312,27 @@
                 <h3 class="text-2xl font-bold text-dark mb-2">Honda Bay Island Hopping</h3>
               </div>
 
-              <p class="text-gray-600 mb-4 text-sm">
+              <p class="text-gray-600 mb-1 text-sm">
                 Island-hopping tour featuring Cowrie Island, Starfish Island, and Luli Island.
               </p>
 
               <!-- View Info Toggle -->
               <a onclick="
-                const inclusions = document.getElementById('inclusions');
-                const icon = this.querySelector('i');
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
                 inclusions.classList.toggle('hidden');
-                const isOpen = !inclusions.classList.contains('hidden');
-                this.innerHTML = (isOpen ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
-                " class="text-primary text-sm font-medium hover:underline inline-block mb-2 cursor-pointer">
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm font-medium hover:underline inline-block cursor-pointer">
                 View Inclusions <i class="fas fa-chevron-right ml-1"></i>
               </a>
 
-              <!-- Inclusions Section (hidden by default) -->
-              <div id="inclusions" class="hidden">
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
                 <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
                   <li>• Entrance Fee</li>
                   <li>• Environmental Fee</li>
@@ -261,15 +345,16 @@
                 </ul>
               </div>
 
-              <div class="flex items-center text-gray-500 mb-4 mt-4">
+
+              <div class="flex items-center text-gray-500 mb-2 mt-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>Puerto Princesa, Palawan</span>
               </div>
 
               <div class="flex justify-between items-center">
-                <div class="flex flex-col items-center">
-                  <span class="text-primary text-2xl font-bold">₱1,900</span>
-                  <span class="text-primary text-md">per person</span>
+                <div class="flex flex-col items-left">
+                  <span class="text-primary text-lg md:text-2xl font-bold">₱1,900</span>
+                  <span class="text-primary text-sm md:text-md">per person</span>
                 </div>
                 <a href="tours/hondabay.html"
                   class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
@@ -280,7 +365,7 @@
           </div>
 
           <!--Tour Card 5 Port Barton-->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
               <img src="images/tp_portbarton.jpeg" alt="Japanese Culture" class="w-full h-64 object-cover" />
             </div>
@@ -288,18 +373,41 @@
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-2xl font-bold text-dark mb-2">Port Barton</h3>
               </div>
-              <p class="text-gray-600 mb-4 text-sm">
+              <p class="text-gray-600 mb-1 text-sm">
                 Unwind in hidden beaches, snorkel coral-rich waters, and enjoy
                 the peaceful charm of this coastal gem.
               </p>
-              <div class="flex items-center text-gray-500 mb-4 mt-4">
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm font-medium hover:underline inline-block cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                  <li>• Temporary Placeholder</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center text-gray-500 mb-4 mt-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>San Vicente, Palawan</span>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex flex-col items-center">
-                  <!-- <span class="text-primary text-2xl font-bold">₱1,800</span>
-                  <span class="text-primary text-md">per person</span> -->
+                <div class="flex flex-col items-left">
+                  <!-- <span class="text-primary text-lg md:text-2xl font-bold">₱1,800</span>
+                  <span class="text-primary text-sm md:text-md">per person</span> -->
                 </div>
                 <a href="tours/hondabay.html"
                   class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
@@ -308,7 +416,7 @@
             </div>
           </div>
           <!--Tour Card 6 Balabac-->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover border border-gray-300">
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
               <img src="images/tp_balabac.jpeg" alt="Cowrie Island" class="w-full h-64 object-cover" />
             </div>
@@ -316,18 +424,41 @@
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-2xl font-bold text-dark mb-2">Balabac</h3>
               </div>
-              <p class="text-gray-600 mb-4 text-sm">
+              <p class="text-gray-600 mb-1 text-sm">
                 Discover untouched islands, turquoise waters, and some of
-                Palawan’s most secluded white sand beaches.
+                Palawan's most secluded white sand beaches.
               </p>
-              <div class="flex items-center text-gray-500 mb-4 mt-4">
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm font-medium hover:underline inline-block cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                  <li>• Temporary Placeholder</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center text-gray-500 mb-4 mt-2">
                 <i class="fas fa-map-marker-alt mr-2"></i>
                 <span>Balabac, Palawan</span>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex flex-col items-center">
-                  <!-- <span class="text-primary text-2xl font-bold">₱1,800</span>
-                  <span class="text-primary text-md">per person</span> -->
+                <div class="flex flex-col items-left">
+                  <!-- <span class="text-primary text-lg md:text-2xl font-bold">₱1,800</span>
+                  <span class="text-primary text-sm md:text-md">per person</span> -->
                 </div>
                 <a href="tours/hondabay.html"
                   class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
@@ -335,6 +466,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="slider-dots" class="flex justify-center gap-2 mt-6 md:hidden">
+          <!-- JS inserts dots here -->
         </div>
 
         <div class="text-center mt-12">
@@ -644,6 +778,87 @@
   </footer>
 
   <script src="hamburger-menu.js" defer></script>
+  <script>
+    const slider = document.getElementById('slider');
+    const dotsContainer = document.getElementById('slider-dots');
+    const cards = slider.querySelectorAll('.snap-start');
+    let activeIndex = 0;
+    let cachedCardWidth = 0;
+    let isScrolling;
+
+    // Calculate and cache card width
+    const updateCardWidth = () => {
+      cachedCardWidth = cards[0].offsetWidth + 24;
+    };
+
+    // Setup dots
+    const setupDots = () => {
+      dotsContainer.innerHTML = '';
+      cards.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    };
+
+    // Update dots based on scroll
+    const updateDots = () => {
+      const scrollLeft = slider.scrollLeft;
+      activeIndex = Math.round(scrollLeft / cachedCardWidth);
+      document.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+      });
+    };
+
+    // Scroll to specific slide
+    const goToSlide = (index) => {
+      slider.scrollTo({
+        left: index * cachedCardWidth,
+        behavior: 'smooth'
+      });
+    };
+
+    // Scroll carousel by direction (-1 or 1)
+    const scrollSlider = (direction) => {
+      slider.scrollBy({
+        left: direction * cachedCardWidth,
+        behavior: 'smooth'
+      });
+    };
+
+    // Throttled scroll handler
+    const handleScroll = () => {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        updateDots();
+      }, 100);
+    };
+
+    // Setup everything on mobile only
+    const handleResponsiveSlider = () => {
+      updateCardWidth();
+      if (window.innerWidth < 768) {
+        setupDots();
+        slider.addEventListener('scroll', handleScroll);
+      } else {
+        dotsContainer.innerHTML = '';
+        slider.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    // Initial setup
+    window.addEventListener('load', () => {
+      updateCardWidth();
+      handleResponsiveSlider();
+    });
+
+    window.addEventListener('resize', handleResponsiveSlider);
+    window.scrollSlider = scrollSlider;
+  </script>
+
+
 </body>
 
 </html>
