@@ -439,9 +439,6 @@
   .h-80 {
     height: calc(var(--spacing) * 80);
   }
-  .h-\[20vh\] {
-    height: 20vh;
-  }
   .h-\[40vh\] {
     height: 40vh;
   }
