@@ -133,6 +133,73 @@
         <div id="slider"
           class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth no-scrollbar pb-4 md:pb-0">
 
+          <!--Tour Card 3 Coron-->
+          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
+            <div class="relative">
+              <img src="images/tp_coron.jpg" alt="Japanese Culture" class="w-full h-64 object-cover rounded-t-xl" />
+              <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                Popular
+              </div>
+            </div>
+            <div class="p-6 px-8">
+              <div class="flex justify-between items-start">
+                <h3 class="text-xl md:text-2xl font-bold text-dark mb-2">Coron Tour Package</h3>
+              </div>
+              
+              <p class="text-gray-600 mb-1 text-sm">
+                Swim in crystal-clear lakes, snorkel vibrant reefs, and
+                explore WWII shipwrecks in Coron.
+              </p>
+
+              <span class="bg-red-500 text-light px-2 py-1 rounded text-sm font-medium mb">Duration: 3 Days</span>
+              <span class="bg-red-400 text-light px-2 py-1 rounded text-sm font-medium mb">Minimum of 2 people</span>
+              <br>
+
+              <!-- View Info Toggle -->
+              <a onclick="
+                var wrapper = this.closest('.card');
+                var inclusions = wrapper.querySelector('.inclusions');
+                var icon = this.querySelector('i');
+                inclusions.classList.toggle('hidden');
+                var isOpen = !inclusions.classList.contains('hidden');
+                this.innerHTML = (isOpen 
+                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                " class="text-primary text-sm mt-2 font-bold hover:underline inline-block cursor-pointer">
+                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+
+
+              <!-- Inclusions Section -->
+              <div class="inclusions hidden">
+                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                  <li>• Roundtrip Aircon Van Transfer (Airport-Town) Sharing</li>
+                  <li>• Roundtrip Boat Transfer (Island Hopping)</li>
+                  <li>• 2 Nights Accommodation with Breakfast</li>
+                  <li>• Licensed Local Tour Guide</li>
+                  <li>• Drop and Pick-up</li>
+                  <li>• All Entrance Fees are Included</li>
+                  <li>• Coron Island Tours</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center text-gray-500 mb-4 mt-2 text-sm md:text-base">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Coron, Palawan</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex flex-col items-left">
+                  <span class="text-primary text-lg md:text-2xl font-bold">₱5,999</span>
+                  <span class="text-primary text-sm md:text-md">per person</span>
+                </div>
+                <a href="tours/coron-3d2n.html"
+                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                  View Package
+                </a>
+              </div>
+            </div>
+          </div>
+
           <!--Tour Card 1 Underground-->
           <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
@@ -189,8 +256,7 @@
                   <span class="text-primary text-sm md:text-md">per person</span>
                 </div>
                 <a href="#
-                "
-                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                " class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
                   Package</a>
               </div>
             </div>
@@ -244,67 +310,12 @@
                   <span class="text-primary text-sm md:text-md">per person</span>
                 </div>
                 <a href="#
-                "
-                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                " class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
                   Package</a>
               </div>
             </div>
           </div>
-          <!--Tour Card 3 Coron-->
-          <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
-            <div class="relative">
-              <img src="images/tp_coron.jpg" alt="Japanese Culture" class="w-full h-64 object-cover rounded-t-xl" />
-              <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
-                Popular
-              </div>
-            </div>
-            <div class="p-6 px-8">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl md:text-2xl font-bold text-dark mb-2">Coron</h3>
-              </div>
-              <p class="text-gray-600 mb-1 text-sm">
-                Swim in crystal-clear lakes, snorkel vibrant reefs, and
-                explore WWII shipwrecks in Coron.
-              </p>
-
-              <!-- View Info Toggle -->
-              <a onclick="
-                var wrapper = this.closest('.card');
-                var inclusions = wrapper.querySelector('.inclusions');
-                var icon = this.querySelector('i');
-                inclusions.classList.toggle('hidden');
-                var isOpen = !inclusions.classList.contains('hidden');
-                this.innerHTML = (isOpen 
-                  ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
-                  : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
-                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
-                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
-              </a>
-
-
-              <!-- Inclusions Section -->
-              <div class="inclusions hidden">
-                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
-                  <li>• Temporary Placeholder</li>
-                </ul>
-              </div>
-
-              <div class="flex items-center text-gray-500 mb-4 mt-2 text-sm md:text-base">
-                <i class="fas fa-map-marker-alt mr-2"></i>
-                <span>Coron, Palawan</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <div class="flex flex-col items-left">
-                  <!-- <span class="text-primary text-lg md:text-2xl font-bold">₱1,699</span>
-                  <span class="text-primary text-sm md:text-md">per person</span> -->
-                </div>
-                <a href="#
-                "
-                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
-                  Package</a>
-              </div>
-            </div>
-          </div>
+          
           <!--Tour Card 4 Honda Bay-->
           <div class="card w-[90vw] md:w-auto bg-white rounded-xl shadow-md border border-gray-300 snap-start shrink-0">
             <div class="relative">
@@ -361,8 +372,7 @@
                   <span class="text-primary text-sm md:text-md">per person</span>
                 </div>
                 <a href="#
-                "
-                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                " class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
                   View Package
                 </a>
               </div>
@@ -415,8 +425,7 @@
                   <span class="text-primary text-sm md:text-md">per person</span> -->
                 </div>
                 <a href="#
-                "
-                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                " class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
                   Package</a>
               </div>
             </div>
@@ -467,8 +476,7 @@
                   <span class="text-primary text-sm md:text-md">per person</span> -->
                 </div>
                 <a href="#
-                "
-                  class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                " class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
                   Package</a>
               </div>
             </div>
