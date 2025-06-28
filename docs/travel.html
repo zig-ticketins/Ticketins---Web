@@ -12,7 +12,6 @@
 </head>
 
 <body class="bg-light">
-    <!--Header/Navbar (Same as other pages)-->
     <header class="bg-white shadow-lg fixed w-full z-50 py-2">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -86,27 +85,429 @@
             </div>
         </nav>
     </header>
-    <main class="min-h-[80vh] bg-gradient-to-br from-primary via-primary to-primary flex items-center justify-center">
-        <div class="text-center px-6">
-            <div class="animate-bounce mb-6">
-                <svg class="mx-auto w-24 h-24 text-light drop-shadow-lg" fill="none" stroke="currentColor"
-                    stroke-width="1.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
+    <main>
+        <!--Packages Hero Section-->
+        <section class="packages-hero pt-16 pb-32 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Discover Our Tours</h1>
+                <p class="text-xl max-w-3xl mx-auto">Handcrafted travel experiences designed to create unforgettable
+                    memories</p>
             </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-dark drop-shadow-sm mb-4">
-                Page Under Construction!
-            </h1>
-            <p class="text-lg text-light max-w-xl mx-auto mb-8">
-                We're working hard to finish the development of this section. Hang tight exciting updates are on the
-                way!
-            </p>
-            <div class="inline-block bg-light text-primary font-semibold px-4 py-2 rounded-full shadow-md">
-                Sorry for the inconvenience (｡>﹏<｡) </div>
-            </div>
-    </main>
+        </section>
 
+        <!--Packages Filter Section-->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-dark mb-4 md:mb-0">Tour Packages</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition active"
+                            data-filter="all">All Tours</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="adventure">Adventure</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="cultural">Cultural</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="beach">Beach</button>
+                        <button
+                            class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white transition"
+                            data-filter="luxury">Luxury</button>
+                    </div>
+                </div>
+
+                <!--Search and Sort-->
+                <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="md:col-span-2">
+                        <div class="relative">
+                            <input type="text" placeholder="Search destinations, tours..."
+                                class="w-full p-4 pl-12 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                            <i
+                                class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <select
+                            class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                            <option>Sort by: Recommended</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Duration: Short to Long</option>
+                            <option>Duration: Long to Short</option>
+                            <option>Highest Rated</option>
+                        </select>
+                    </div>
+                </div> -->
+
+                <!--Tour Packages Grid-->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!--Tour Package 1 Elnido Tour A-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="beach luxury">
+                        <div class="relative">
+                            <img src="images/tours/Elnido-A-1.jpg" alt="Tropical Paradise"
+                                class="w-full h-64 object-cover" />
+                            <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                        </div>
+                        <div class="p-6 px-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-bold text-dark mb-2">
+                                    El Nido <span class="text-base text-gray-500">(Tour A)</span>
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-2 text-sm">
+                                Witness paradise in El Nido: Island-hop through the Secret Lagoon, Payong-Payong Beach,
+                                Small Lagoon, Shimizu Island, and 7 Commando Beach
+                            </p>
+
+                            <!-- View Info Toggle -->
+                            <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+
+
+                            <!-- Inclusions Section -->
+                            <div class="inclusions hidden">
+                                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                    <li>• All entrance & lagoon fees</li>
+                                    <li>• Lunch Buffet</li>
+                                    <li>• Licensed Professional Tour guide</li>
+                                    <li>• Tourist Boat Transfer</li>
+                                    <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                    <li>• Life Jacket</li>
+                                    <li>• Travel Insurance</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex items-center text-gray-500 mb-2 mt-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>El Nido, Palawan</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-2xl font-bold"> </span>
+                                    <span class="text-primary text-md"> </span>
+                                </div>
+                                <a href="tours/elnido-A.html"
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Package</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 2-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="beach luxury">
+                        <div class="relative">
+                            <img src="images/tours/Elnido-B-1.webp" alt="Tropical Paradise"
+                                class="w-full h-64 object-cover" />
+                            <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                        </div>
+                        <div class="p-6 px-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-bold text-dark mb-2">
+                                    El Nido <span class="text-base text-gray-500">(Tour B)</span>
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-2 text-sm">
+                                Discover El Nido's hidden gems: Snake Island, Pinagbuyutan, Cudugnon Cave, Entalula
+                                Beach, and and snorkel into crystal-clear waters
+                            </p>
+
+                            <!-- View Info Toggle -->
+                            <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+
+
+                            <!-- Inclusions Section -->
+                            <div class="inclusions hidden">
+                                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                    <li>• All entrance & lagoon fees</li>
+                                    <li>• Lunch Buffet</li>
+                                    <li>• Licensed Professional Tour guide</li>
+                                    <li>• Tourist Boat Transfer</li>
+                                    <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                    <li>• Life Jacket</li>
+                                    <li>• Travel Insurance</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex items-center text-gray-500 mb-2 mt-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>El Nido, Palawan</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-2xl font-bold"> </span>
+                                    <span class="text-primary text-md"> </span>
+                                </div>
+                                <a href="tours/elnido-B.html"
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Package</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 3-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="beach luxury">
+                        <div class="relative">
+                            <img src="images/tours/Elnido-C-1.jpg" alt="Tropical Paradise"
+                                class="w-full h-64 object-cover" />
+                            <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                        </div>
+                        <div class="p-6 px-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-bold text-dark mb-2">
+                                    El Nido <span class="text-base text-gray-500">(Tour C)</span>
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-2 text-sm">
+                                Uncover El Nido's wonders: Helicopter Island, Matinloc Shrine, Secret Beach, Talisay,
+                                and Hidden Beach. All in one unforgettable tour!
+                            </p>
+
+                            <!-- View Info Toggle -->
+                            <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+
+
+                            <!-- Inclusions Section -->
+                            <div class="inclusions hidden">
+                                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                    <li>• All entrance & lagoon fees</li>
+                                    <li>• Lunch Buffet</li>
+                                    <li>• Licensed Professional Tour guide</li>
+                                    <li>• Tourist Boat Transfer</li>
+                                    <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                    <li>• Life Jacket</li>
+                                    <li>• Travel Insurance</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex items-center text-gray-500 mb-2 mt-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>El Nido, Palawan</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-2xl font-bold">₱1,500</span>
+                                    <span class="text-primary text-md">per person</span>
+                                </div>
+                                <a href="tours/elnido-C.html"
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Package</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tour Package 4-->
+                    <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                        data-category="beach luxury">
+                        <div class="relative">
+                            <img src="images/tours/Elnido-D-1.jpg" alt="Tropical Paradise"
+                                class="w-full h-64 object-cover" />
+                            <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                        </div>
+                        <div class="p-6 px-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-2xl font-bold text-dark mb-2">
+                                    El Nido <span class="text-base text-gray-500">(Tour D)</span>
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-2 text-sm">
+                                Discover the magic of El Nido: Cruise through Big Lagoon, Cadlao Lagoon, and unwind on
+                                the pristine shores of Paradise, Pasandigan, Nat-Nat, and Bukal Beach
+                            </p>
+
+                            <!-- View Info Toggle -->
+                            <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                                View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+
+
+                            <!-- Inclusions Section -->
+                            <div class="inclusions hidden">
+                                <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                    <li>• All entrance & lagoon fees</li>
+                                    <li>• Lunch Buffet</li>
+                                    <li>• Licensed Professional Tour guide</li>
+                                    <li>• Tourist Boat Transfer</li>
+                                    <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                    <li>• Life Jacket</li>
+                                    <li>• Travel Insurance</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex items-center text-gray-500 mb-2 mt-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>El Nido, Palawan</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-2xl font-bold"> </span>
+                                    <span class="text-primary text-md"> </span>
+                                </div>
+                                <a href="tours/elnido-D.html"
+                                    class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                    Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Pagination-->
+                <!-- <div class="flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">2</button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">3</button>
+                        <span class="px-2">...</span>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">8</button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white transition">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </nav>
+                </div> -->
+            </div>
+        </section>
+
+        <!--Why Choose Us Section-->
+        <!-- <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">Why Choose Ticketins</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We go beyond ordinary travel to deliver
+                        extraordinary experiences</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-globe-americas text-primary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Local Experts</h3>
+                        <p class="text-gray-600">Our tours are designed by destination experts who know the hidden gems
+                            and authentic experiences.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                        <div
+                            class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-heart text-secondary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Small Groups</h3>
+                        <p class="text-gray-600">Enjoy more personalized attention with our small group sizes (average
+                            12 people).</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                        <div
+                            class="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-shield-alt text-yellow-500 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Peace of Mind</h3>
+                        <p class="text-gray-600">24/7 support, flexible booking options, and comprehensive travel
+                            protection.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!--CTA Section-->
+        <section class="py-16 bg-primary text-white mt-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6">Can't Find What You're Looking For?</h2>
+                <p class="text-xl mb-8">Our travel specialists can create a custom itinerary tailored to your specific
+                    interests and budget.</p>
+                <a href="https://www.facebook.com/ticketinstravelandtoursenriched" target="_blank">
+                    <button
+                        class="bg-white border-2 border-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-primary hover:text-white transition">
+                        Request Custom Tour
+                    </button>
+                </a>
+
+            </div>
+        </section>
+    </main>
     <!--Footer-->
     <div class="py-16 bg-primary text-white shapedividers_com-896">
     </div>
@@ -222,7 +623,7 @@
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                //Update active state
+                // Update active state
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
 

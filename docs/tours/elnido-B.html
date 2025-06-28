@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <title>Ticketins - Travel & Tours</title>
+    <link rel="icon" href="../images/LogoWhite.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-light">
+    <!--Navbar-->
+    <header class="bg-white shadow-lg fixed w-full z-50 py-2">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!--Logo-->
+                <div class="flex h-16 items-center">
+                    <img src="../images/Logo.png" alt="Logo" class="h-16 object-cover select-none" draggable="false" />
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="text-2xl font-bold text-dark leading-none">TICKETINS</span>
+                        <span class="text-base text-dark leading-tight">Travel & Tours</span>
+                        <span class="text-xs text-dark leading-tight">Enriching Memories</span>
+                    </div>
+                </div>
+
+                <!--Desktop Navigation-->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-center space-x-8 max-[1066px]:space-x-3">
+                        <a href="../index.html" class="text-dark font-medium hover:text-primary transition">Home</a>
+                        <a href="../about.html" class="text-dark font-medium hover:text-primary transition">About Us</a>
+                        <a href="../travel.html" class="text-primary font-medium hover:text-primary transition">Tour
+                            Packages</a>
+                        <a href="../other.html" class="text-dark font-medium hover:text-primary transition">Other
+                            Services</a>
+                        <a href="../contact.html" class="text-dark font-medium hover:text-primary transition">Contact
+                            Us</a>
+                        <a href="../gallery.html"
+                            class="text-dark font-medium hover:text-primary transition">Gallery</a>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-accent transition">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!--Mobile menu button-->
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="lg:hidden text-dark hover:text-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="top-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16" class="transition-all duration-300 origin-center transform"></path>
+                            <path id="middle-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 12h16" class="transition-all duration-300 opacity-100"></path>
+                            <path id="bottom-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 18h16" class="transition-all duration-300 origin-center transform"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!--Mobile Navigation-->
+            <div id="mobile-menu"
+                class="lg:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 flex flex-col">
+                <div class="h-[calc(100vh-60px)] overflow-y-auto pt-4 px-4">
+                    <a href="../index.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Home</a>
+                    <a href="../about.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">About
+                        Us</a>
+                    <a href="../travel.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-primary hover:bg-gray-100">Tour
+                        Packages</a>
+                    <a href="../other.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Other
+                        Services</a>
+                    <a href="../contact.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Contact
+                        Us</a>
+                    <a href="../gallery.html"
+                        class="block px-3 py-2 rounded-lg text-base font-medium text-dark hover:bg-gray-100">Gallery</a>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200">
+                    <button class="w-full bg-primary text-white px-4 py-3 rounded-lg hover:bg-secondary transition">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Main Content -->
+        <div class="container mx-auto px-6 py-4 pt-24">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="../travel.html" class="hover:text-blue-600">Tour Packages</a>
+                <span class="mx-2"><i class="fas fa-chevron-right text-xs"></i></span>
+                <span class="text-gray-800">El Nido (Tour B)</span>
+            </div>
+        </div>
+        <section class="container mx-auto px-6 py-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Left Column - Image -->
+                <div class="lg:w-1/2">
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <!-- Main Image (with ID for JavaScript targeting) -->
+                        <img id="mainImage" src="../images/tours/Elnido-B-1.webp" alt="El Nido Island Hopping"
+                            class="w-full h-[40vh] md:h-[70vh] object-cover">
+                    </div>
+
+                    <!-- Gallery Thumbnails -->
+                    <div class="grid grid-cols-4 gap-2 mt-4">
+                        <!-- Each thumbnail has onclick handler and data-src attribute -->
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-1.webp', 'Shimizu Island')">
+                            <img src="../images/tours/Elnido-B-1.webp" alt="Shimizu Island"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-2.webp', 'Secret Lagoon')">
+                            <img src="../images/tours/Elnido-B-2.webp" alt="Secret Lagoon"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-3.jpg', '7 Commando Beach')">
+                            <img src="../images/tours/Elnido-B-3.jpg" alt="7 Commando Beach"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-4.webp', 'Small Lagoon')">
+                            <img src="../images/tours/Elnido-B-4.webp" alt="Small Lagoon"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-5.webp', 'Small Lagoon')">
+                            <img src="../images/tours/Elnido-B-5.webp" alt="Small Lagoon"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-6.jpg', 'Small Lagoon')">
+                            <img src="../images/tours/Elnido-B-6.jpg" alt="Small Lagoon"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-7.jpg', 'Small Lagoon')">
+                            <img src="../images/tours/Elnido-B-7.jpg" alt="Small Lagoon"
+                                class="w-full h-20 object-cover">
+                        </div>
+                        <div class="rounded overflow-hidden cursor-pointer"
+                            onclick="changeMainImage('../images/tours/Elnido-B-8.jpg', 'Small Lagoon')">
+                            <img src="../images/tours/Elnido-B-8.jpg" alt="Small Lagoon"
+                                class="w-full h-20 object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Info -->
+                <div class="lg:w-1/2 text-gray-500 text-sm">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">El Nido Island Hopping (Tour B)</h1>
+
+                    <!-- Tour Caption -->
+                    <div class="mt-6 mb-6 ">
+                        <p class="text-gray-700">
+                            Discover El Nido's hidden gems: Snake Island, Pinagbuyutan, Cudugnon Cave, Entalula
+                            Beach, and and snorkel into crystal-clear waters
+                        </p>
+                    </div>
+
+                    <!-- Destinations -->
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+                            Destinations:
+                        </h2>
+                        <ul class="grid grid-cols-1 lg:grid-cols-1 gap-y-2 gap-x-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                                <span>Snake Island</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                                <span>Pinagbuyutan Island</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                                <span>Cadugnon Cave</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                                <span>Entatula Beach</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Inclusions -->
+                    <div class="mb-6">
+                        <h2 class="text-lg text-gray-700 font-semibold mb-3 flex items-center">
+                            Inclusion:
+                        </h2>
+                        <ul class="grid grid-cols-1 lg:grid-cols-2 gap-y-2 gap-x-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>All Entrance & Lagoon Fees are Included</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>Licensed Professional Tour Guide</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>Buffet Lunch (during Tour)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>Tourist Boat Transfer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>Free Pick-up & Drop-off from-to Accommodation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>Life Jacket</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-700 mt-1 mr-2"></i>
+                                <span>Travel Insurance</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Exclusions -->
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+                            Exclusions
+                        </h2>
+                        <ul class="grid grid-cols-1 lg:grid-cols-2 gap-y-2 gap-x-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-times text-red-700 mt-1 mr-2"></i>
+                                <span>Airfare</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times text-red-700 mt-1 mr-2"></i>
+                                <span>Dinner</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times text-red-700 mt-1 mr-2"></i>
+                                <span>Kayak Rental for El Nido Lagoon (optional)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times text-red-700 mt-1 mr-2"></i>
+                                <span>ELNIDO Environmental Fee (ETDF)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times text-red-700 mt-1 mr-2"></i>
+                                <span>Personal expenses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times text-red-700 mt-1 mr-2"></i>
+                                <span>Swimming Equipment</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <!-- <div class="bg-gray-100 p-4 rounded-lg">
+                        <h3 class="font-semibold text-gray-800 mb-2">Additional Information</h3>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-gray-500 mt-1 mr-2"></i>
+                                <span><strong>Duration:</strong> Approximately 8 hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-gray-500 mt-1 mr-2"></i>
+                                <span><strong>Availability:</strong> Daily (weather permitting)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-users text-gray-500 mt-1 mr-2"></i>
+                                <span><strong>Group Size:</strong> Maximum 15 people</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-baby text-gray-500 mt-1 mr-2"></i>
+                                <span><strong>Age Requirement:</strong> All ages welcome</span>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-blue-700"> </span>
+                                <span class="text-gray-600 ml-1"> </span>
+                            </div>
+                            <a href="https://www.facebook.com/ticketinstravelandtoursenriched" target="_blank">
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                                    Book Now
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Itinerary Section -->
+            <!-- <div class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Tour Itinerary</h2>
+
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Hotel Pickup & Departure</h3>
+                                <p class="text-gray-600 mt-1">7:00 AM - 7:30 AM</p>
+                                <p class="text-gray-700 mt-2">Our team will pick you up from your hotel and transfer you
+                                    to the departure point where you'll meet your guide and group.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Small Lagoon Exploration</h3>
+                                <p class="text-gray-600 mt-1">8:30 AM - 10:00 AM</p>
+                                <p class="text-gray-700 mt-2">Kayak or swim in the stunning Small Lagoon surrounded by
+                                    towering limestone cliffs and crystal-clear waters.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Shimizu Island Visit</h3>
+                                <p class="text-gray-600 mt-1">10:30 AM - 12:00 PM</p>
+                                <p class="text-gray-700 mt-2">Enjoy swimming and snorkeling in the vibrant coral gardens
+                                    of Shimizu Island, home to diverse marine life.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                <span class="font-bold">4</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Lunch at 7 Commando Beach</h3>
+                                <p class="text-gray-600 mt-1">12:30 PM - 2:00 PM</p>
+                                <p class="text-gray-700 mt-2">Relax on the white sand beach while enjoying a delicious
+                                    buffet lunch featuring local and international dishes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                <span class="font-bold">5</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Secret Lagoon Discovery</h3>
+                                <p class="text-gray-600 mt-1">2:30 PM - 4:00 PM</p>
+                                <p class="text-gray-700 mt-2">Explore the hidden Secret Lagoon accessible only through a
+                                    small opening in the rocks, a true hidden gem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                <span class="font-bold">6</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Return & Hotel Drop-off</h3>
+                                <p class="text-gray-600 mt-1">5:00 PM - 5:30 PM</p>
+                                <p class="text-gray-700 mt-2">After an amazing day, we'll transfer you back to your
+                                    hotel with unforgettable memories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Reviews Section -->
+            <!-- <div class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Customer Reviews</h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-xl font-bold text-gray-600 mr-4">
+                                JS</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">John Smith</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"Absolutely breathtaking experience! The tour guides were knowledgeable
+                            and made sure everyone was safe and having fun. The lunch was delicious with plenty of
+                            options. Highly recommend!"</p>
+                        <p class="text-sm text-gray-500 mt-3">Posted on March 15, 2023</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-xl font-bold text-gray-600 mr-4">
+                                MA</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Maria Anderson</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"The lagoons were stunning and the tour was well-organized. The only
+                            reason I'm not giving 5 stars is because the kayak rental was extra and not clearly
+                            mentioned beforehand. Otherwise fantastic!"</p>
+                        <p class="text-sm text-gray-500 mt-3">Posted on February 28, 2023</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6">
+                    <button
+                        class="bg-white border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                        View All Reviews
+                    </button>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- FAQ Section -->
+        <div class="bg-gray-100 mt-12 py-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Frequently Asked Questions</h2>
+
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full text-left"
+                            aria-expanded="false">
+                            <h3 class="font-semibold text-gray-800">What should I bring on the tour?</h3>
+                            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="mt-3 text-gray-700 hidden">
+                            <p>We recommend bringing sunscreen, a hat, sunglasses, swimwear, a towel, a change of
+                                clothes, waterproof camera or phone case, cash for personal expenses, and any personal
+                                medications you may need.</p>
+                        </div>
+                    </div>
+
+                    <!-- Repeat for each FAQ item -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full text-left"
+                            aria-expanded="false">
+                            <h3 class="font-semibold text-gray-800">Is this tour suitable for children and elderly?</h3>
+                            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="mt-3 text-gray-700 hidden">
+                            <p>Yes, this tour is suitable for all ages. However, please note that some activities like
+                                swimming and getting on/off the boat require basic physical ability. We provide life
+                                jackets for all participants and our crew will assist as needed.</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full text-left"
+                            aria-expanded="false">
+                            <h3 class="font-semibold text-gray-800">What happens if the weather is bad?</h3>
+                            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="mt-3 text-gray-700 hidden">
+                            <p>For safety reasons, tours may be canceled or rescheduled in case of bad weather. If your
+                                tour is canceled due to weather, you'll be offered the choice of rescheduling or
+                                receiving a full refund.</p>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full text-left"
+                            aria-expanded="false">
+                            <h3 class="font-semibold text-gray-800">Are vegetarian or special diet options available for
+                                lunch?</h3>
+                            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="mt-3 text-gray-700 hidden">
+                            <p>Yes, we can accommodate vegetarian and some special dietary requirements if notified in
+                                advance during booking. Please inform us of any dietary restrictions when you make your
+                                reservation.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Related Tours -->
+        <div class="container mx-auto px-6 py-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8">You Might Also Like</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                    data-category="beach luxury">
+                    <div class="relative">
+                        <img src="../images/tours/Elnido-A-1.jpg" alt="Tropical Paradise"
+                            class="w-full h-64 object-cover" />
+                        <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                    </div>
+                    <div class="p-6 px-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-dark mb-2">
+                                El Nido <span class="text-base text-gray-500">(Tour A)</span>
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">
+                            Witness paradise in El Nido: Island-hop through the Secret Lagoon, Payong-Payong Beach,
+                            Small Lagoon, Shimizu Island, and 7 Commando Beach
+                        </p>
+
+                        <!-- View Info Toggle -->
+                        <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                            View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+
+
+                        <!-- Inclusions Section -->
+                        <div class="inclusions hidden">
+                            <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                <li>• All entrance & lagoon fees</li>
+                                <li>• Lunch Buffet</li>
+                                <li>• Licensed Professional Tour guide</li>
+                                <li>• Tourist Boat Transfer</li>
+                                <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                <li>• Life Jacket</li>
+                                <li>• Travel Insurance</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center text-gray-500 mb-2 mt-2">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>El Nido, Palawan</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col items-center">
+                                <span class="text-primary text-2xl font-bold"> </span>
+                                <span class="text-primary text-md"> </span>
+                            </div>
+                            <a href="../tours/elnido-A.html"
+                                class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Tour Package 3-->
+                <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                    data-category="beach luxury">
+                    <div class="relative">
+                        <img src="../images/tours/Elnido-C-1.jpg" alt="Tropical Paradise"
+                            class="w-full h-64 object-cover" />
+                        <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                    </div>
+                    <div class="p-6 px-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-dark mb-2">
+                                El Nido <span class="text-base text-gray-500">(Tour C)</span>
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">
+                            Uncover El Nido's wonders: Helicopter Island, Matinloc Shrine, Secret Beach, Talisay,
+                            and Hidden Beach. All in one unforgettable tour!
+                        </p>
+
+                        <!-- View Info Toggle -->
+                        <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                            View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+
+
+                        <!-- Inclusions Section -->
+                        <div class="inclusions hidden">
+                            <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                <li>• All entrance & lagoon fees</li>
+                                <li>• Lunch Buffet</li>
+                                <li>• Licensed Professional Tour guide</li>
+                                <li>• Tourist Boat Transfer</li>
+                                <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                <li>• Life Jacket</li>
+                                <li>• Travel Insurance</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center text-gray-500 mb-2 mt-2">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>El Nido, Palawan</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col items-center">
+                                <span class="text-primary text-2xl font-bold">₱1,500</span>
+                                <span class="text-primary text-md">per person</span>
+                            </div>
+                            <a href="../tours/elnido-C.html"
+                                class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Tour Package 4-->
+                <div class="tour-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300"
+                    data-category="beach luxury">
+                    <div class="relative">
+                        <img src="../images/tours/Elnido-D-1.jpg" alt="Tropical Paradise"
+                            class="w-full h-64 object-cover" />
+                        <!-- <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-6 py-1 rounded-full text-sm font-medium animate-ping">
+                                ㅤㅤㅤㅤ
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Best Seller
+                            </div> -->
+                    </div>
+                    <div class="p-6 px-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-dark mb-2">
+                                El Nido <span class="text-base text-gray-500">(Tour D)</span>
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">
+                            Discover the magic of El Nido: Cruise through Big Lagoon, Cadlao Lagoon, and unwind on
+                            the pristine shores of Paradise, Pasandigan, Nat-Nat, and Bukal Beach
+                        </p>
+
+                        <!-- View Info Toggle -->
+                        <a onclick="
+                                var wrapper = this.closest('.tour-card');
+                                var inclusions = wrapper.querySelector('.inclusions');
+                                var icon = this.querySelector('i');
+                                inclusions.classList.toggle('hidden');
+                                var isOpen = !inclusions.classList.contains('hidden');
+                                this.innerHTML = (isOpen 
+                                ? 'Hide Inclusions <i class=&quot;fas fa-chevron-down ml-1&quot;></i>' 
+                                : 'View Inclusions <i class=&quot;fas fa-chevron-right ml-1&quot;></i>');
+                                " class="text-primary text-sm font-bold hover:underline inline-block cursor-pointer">
+                            View Inclusions <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+
+
+                        <!-- Inclusions Section -->
+                        <div class="inclusions hidden">
+                            <ul class="grid grid-cols-2 gap-x-4 text-primary text-xs">
+                                <li>• All entrance & lagoon fees</li>
+                                <li>• Lunch Buffet</li>
+                                <li>• Licensed Professional Tour guide</li>
+                                <li>• Tourist Boat Transfer</li>
+                                <li>• Pick-up & Drop-off from-to Accomodation</li>
+                                <li>• Life Jacket</li>
+                                <li>• Travel Insurance</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center text-gray-500 mb-2 mt-2">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>El Nido, Palawan</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col items-center">
+                                <span class="text-primary text-2xl font-bold"> </span>
+                                <span class="text-primary text-md"> </span>
+                            </div>
+                            <a href="../tours/elnido-D.html"
+                                class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">View
+                                Package</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--Footer-->
+    <div class="py-16 bg-light text-white shapedividers_com-896">
+    </div>
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex h-16 items-center mb-2">
+                        <img src="../images/InvertedLogo.png" alt="Logo" class="h-12 object-cover">
+                        <div class="flex-shrink-0 flex flex-col items-center">
+                            <span class="text-2xl font-bold text-light leading-none">TICKETINS</span>
+                            <span class="text-base text-light leading-tight">Travel & Tours</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Enriching Memories</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/Ticketinstravelandtours" target="_blank"
+                            class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="../about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="../travel.html" class="text-gray-400 hover:text-white transition">Tour Packages</a>
+                        </li>
+                        <li><a href="../other.html" class="text-gray-400 hover:text-white transition">Other Services</a>
+                        </li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a>
+                        </li>
+                        <li><a href="../gallery.html" class="text-gray-400 hover:text-white transition">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Travel Street, Suite 456, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@exploreera.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-xl mt-12 text-center text-light">
+                <a href="https://krakendesign.co.uk/"
+                    class="inline-flex items-center gap-2  opacity-50 transition hover:opacity-100">
+                    <img src="../images/KrakenDesignLogo.png" alt="Kraken Designs Logo" class="h-12">
+                    Hosted by Kraken Design
+                </a>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Ticketins Travel & Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../hamburger-menu.js" defer></script>
+    <script>
+        function changeMainImage(newSrc, newAlt) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = newSrc;
+            mainImage.alt = newAlt;
+
+            // Optional: Add smooth transition effect
+            mainImage.classList.add('opacity-0');
+            setTimeout(() => {
+                mainImage.classList.remove('opacity-0');
+            }, 100);
+        }
+    </script>
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+
+                button.setAttribute('aria-expanded', !expanded);
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
